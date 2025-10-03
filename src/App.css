@@ -1,42 +1,585 @@
+/* Biotech Founder Profile - Professional Glassmorphism Theme */
+
+/* Root & Layout */
 #root {
+  min-height: 100vh;
+  background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(145 25% 95%) 100%);
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navigation */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  backdrop-filter: blur(16px);
+  background: hsl(var(--glass-bg) / 0.7);
+  border-bottom: 1px solid hsl(var(--glass-border) / 0.5);
+  box-shadow: 0 4px 24px hsl(var(--shadow-soft) / 0.1);
+}
+
+.navbar-container {
   max-width: 1280px;
   margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(var(--primary));
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-link {
+  color: hsl(var(--foreground));
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: hsl(var(--primary));
+  transition: width 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: hsl(var(--primary));
+}
+
+.navbar-link:hover::after {
+  width: 100%;
+}
+
+.navbar-link.active {
+  color: hsl(var(--primary));
+}
+
+/* Mobile Menu */
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: hsl(var(--foreground));
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: hsl(var(--glass-bg) / 0.95);
+    backdrop-filter: blur(16px);
+    padding: 2rem;
+    gap: 1.5rem;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    border-bottom: 1px solid hsl(var(--glass-border) / 0.5);
+  }
+
+  .navbar-menu.open {
+    transform: translateX(0);
+  }
+}
+
+/* Section Styles */
+.section {
+  min-height: 100vh;
+  padding: 6rem 2rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: hsl(var(--primary));
+  margin-bottom: 1rem;
+  text-align: center;
+  letter-spacing: -0.03em;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: hsl(var(--muted-foreground));
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Glass Card Effect */
+.glass-card {
+  background: hsl(var(--glass-bg) / 0.6);
+  backdrop-filter: blur(16px);
+  border-radius: var(--radius);
+  border: 1px solid hsl(var(--glass-border) / 0.5);
   padding: 2rem;
+  box-shadow: 0 8px 32px hsl(var(--shadow-soft) / 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 48px hsl(var(--shadow-soft) / 0.25);
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  padding-top: 8rem;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: hsl(var(--primary));
+  margin-bottom: 1rem;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: hsl(var(--accent));
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  color: hsl(var(--muted-foreground));
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
+}
+
+.hero-cta {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  text-decoration: none;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 1.125rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px hsl(var(--primary) / 0.3);
+}
+
+.hero-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px hsl(var(--primary) / 0.4);
+  background: hsl(var(--accent));
+}
+
+/* Experience Timeline */
+.experience-timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, hsl(var(--primary)), hsl(var(--secondary)));
+  border-radius: 2px;
+}
+
+.experience-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+  padding-left: 2rem;
+}
+
+.experience-item::before {
+  content: '';
+  position: absolute;
+  left: -2.6rem;
+  top: 0.5rem;
+  width: 16px;
+  height: 16px;
+  background: hsl(var(--primary));
+  border-radius: 50%;
+  border: 3px solid hsl(var(--background));
+  box-shadow: 0 0 0 3px hsl(var(--primary) / 0.2);
+}
+
+.experience-period {
+  font-size: 0.875rem;
+  color: hsl(var(--accent));
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.experience-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.25rem;
+}
+
+.experience-company {
+  font-size: 1rem;
+  color: hsl(var(--primary));
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.experience-description {
+  color: hsl(var(--muted-foreground));
+  line-height: 1.6;
+}
+
+/* Education Grid */
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.education-card {
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.education-degree {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.5rem;
 }
 
-@keyframes logo-spin {
+.education-institution {
+  font-size: 1rem;
+  color: hsl(var(--primary));
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.education-year {
+  font-size: 0.875rem;
+  color: hsl(var(--accent));
+  font-weight: 600;
+}
+
+/* Publications List */
+.publications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.publication-item {
+  padding: 1.5rem;
+}
+
+.publication-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.5rem;
+}
+
+.publication-authors {
+  font-size: 0.95rem;
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+.publication-journal {
+  font-size: 0.95rem;
+  color: hsl(var(--primary));
+  font-weight: 600;
+}
+
+/* Patents Grid */
+.patents-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.patent-card {
+  text-align: left;
+}
+
+.patent-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.75rem;
+}
+
+.patent-number {
+  font-size: 0.875rem;
+  color: hsl(var(--accent));
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.patent-status {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
+  border-radius: calc(var(--radius) / 2);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* Featured Grid */
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.featured-card {
+  text-align: center;
+}
+
+.featured-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.featured-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.75rem;
+}
+
+.featured-description {
+  color: hsl(var(--muted-foreground));
+  line-height: 1.6;
+}
+
+/* Contact Form */
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  font-size: 0.95rem;
+}
+
+.form-input,
+.form-textarea {
+  padding: 0.875rem 1.25rem;
+  background: hsl(var(--glass-bg) / 0.5);
+  backdrop-filter: blur(8px);
+  border: 1px solid hsl(var(--glass-border));
+  border-radius: calc(var(--radius) / 1.5);
+  color: hsl(var(--foreground));
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: hsl(var(--primary));
+  box-shadow: 0 0 0 3px hsl(var(--primary) / 0.1);
+}
+
+.form-textarea {
+  min-height: 150px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.form-button {
+  padding: 1rem 2rem;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border: none;
+  border-radius: calc(var(--radius) / 1.5);
+  font-weight: 600;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px hsl(var(--primary) / 0.3);
+}
+
+.form-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px hsl(var(--primary) / 0.4);
+  background: hsl(var(--accent));
+}
+
+.contact-info {
+  margin-top: 3rem;
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid hsl(var(--border));
+}
+
+.contact-info-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  margin-bottom: 1rem;
+}
+
+.contact-info-item {
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 0.5rem;
+}
+
+.contact-info-link {
+  color: hsl(var(--primary));
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-info-link:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  background: hsl(var(--glass-bg) / 0.8);
+  backdrop-filter: blur(16px);
+  border-top: 1px solid hsl(var(--glass-border) / 0.5);
+  padding: 2rem;
+  text-align: center;
+  color: hsl(var(--muted-foreground));
+}
+
+/* Animations */
+@keyframes fadeInUp {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(30px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section {
+    padding: 5rem 1.5rem 3rem;
+  }
+
+  .navbar-container {
+    padding: 1rem 1.5rem;
+  }
+
+  .glass-card {
+    padding: 1.5rem;
+  }
+
+  .patents-grid,
+  .education-grid,
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-timeline {
+    padding-left: 1.5rem;
+  }
+
+  .experience-item {
+    padding-left: 1.5rem;
   }
 }
 
-.card {
-  padding: 2em;
-}
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
 
-.read-the-docs {
-  color: #888;
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
 }

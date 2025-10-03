@@ -9,7 +9,7 @@ const Navigation = () => {
       <div className="navbar-container">
         <a href="#about" className="navbar-brand">
           <Microscope className="icon-md" />
-          Dr. [Your Name]
+          Mahesh Kandula
         </a>
         <button
           className="navbar-toggle"

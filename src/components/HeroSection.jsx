@@ -59,11 +59,11 @@ const HeroSection = () => {
         <div className="fade-in-up">
           <h1 className="hero-title">
             <Dna className="inline-block icon-lg animate-pulse-glow" />
-            Dr. [Your Name]
+            Mahesh Kandula
           </h1>
           <p className="hero-subtitle">
             <FlaskConical className="icon-md" />
-            Biotechnology Founder & Innovation Leader
+            Inventor and Entrepreneur
             <Sparkles className="icon-md" />
           </p>
           <p className="hero-description">

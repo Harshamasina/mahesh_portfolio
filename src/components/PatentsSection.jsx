@@ -1,8 +1,27 @@
 import { Award, Dna, FlaskConical, Microscope, Target, CheckCircle2, TrendingUp, ExternalLink, Globe } from "lucide-react";
 import { Button } from "./ui/button";
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip, Legend, Cell } from "recharts";
+import { useState, useEffect } from "react";
 
 const PatentsSection = () => {
+  const [axisColor, setAxisColor] = useState("");
+
+  useEffect(() => {
+    const updateAxisColor = () => {
+      const isDark = document.documentElement.classList.contains('dark');
+      setAxisColor(isDark ? '#ffffff' : '#1a1a1a');
+    };
+
+    updateAxisColor();
+
+    const observer = new MutationObserver(updateAxisColor);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class']
+    });
+
+    return () => observer.disconnect();
+  }, []);
   const chartData = [
     { year: "2012", filed: 14, granted: 1 },
     { year: "2013", filed: 177, granted: 1 },
@@ -68,14 +87,14 @@ const PatentsSection = () => {
                 />
                 <XAxis 
                   dataKey="year" 
-                  stroke="hsl(var(--foreground))"
-                  tick={{ fill: "hsl(var(--foreground))", fontSize: 12 }}
+                  stroke={axisColor}
+                  tick={{ fill: axisColor, fontSize: 12 }}
                   tickLine={{ stroke: "hsl(var(--border))" }}
                   axisLine={{ stroke: "hsl(var(--border))" }}
                 />
                 <YAxis 
-                  stroke="hsl(var(--foreground))"
-                  tick={{ fill: "hsl(var(--foreground))", fontSize: 12 }}
+                  stroke={axisColor}
+                  tick={{ fill: axisColor, fontSize: 12 }}
                   tickLine={{ stroke: "hsl(var(--border))" }}
                   axisLine={{ stroke: "hsl(var(--border))" }}
                 />
@@ -168,8 +187,8 @@ const PatentsSection = () => {
                 />
                 <XAxis 
                   dataKey="country" 
-                  stroke="hsl(var(--foreground))"
-                  tick={{ fill: "hsl(var(--foreground))", fontSize: 11 }}
+                  stroke={axisColor}
+                  tick={{ fill: axisColor, fontSize: 11 }}
                   tickLine={{ stroke: "hsl(var(--border))" }}
                   axisLine={{ stroke: "hsl(var(--border))" }}
                   angle={-45}
@@ -177,11 +196,11 @@ const PatentsSection = () => {
                   height={80}
                 />
                 <YAxis 
-                  stroke="hsl(var(--foreground))"
-                  tick={{ fill: "hsl(var(--foreground))", fontSize: 12 }}
+                  stroke={axisColor}
+                  tick={{ fill: axisColor, fontSize: 12 }}
                   tickLine={{ stroke: "hsl(var(--border))" }}
                   axisLine={{ stroke: "hsl(var(--border))" }}
-                  label={{ value: 'Number of Patents', angle: -90, position: 'insideLeft', fill: 'hsl(var(--foreground))' }}
+                  label={{ value: 'Number of Patents', angle: -90, position: 'insideLeft', fill: axisColor }}
                 />
                 <Tooltip 
                   contentStyle={{

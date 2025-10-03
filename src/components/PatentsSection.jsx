@@ -46,43 +46,41 @@ const PatentsSection = () => {
             <TrendingUp className="icon-sm text-primary" />
             Patent Filing & Grant Trends
           </h3>
-          <div className="w-full h-[400px]">
-            <ResponsiveContainer width="100%" height="100%">
-              <LineChart data={chartData} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
-                <CartesianGrid strokeDasharray="3 3" className="stroke-muted" opacity={0.3} />
-                <XAxis 
-                  dataKey="year" 
-                  className="text-muted-foreground"
-                  tick={{ fill: "hsl(var(--muted-foreground))" }}
-                />
-                <YAxis 
-                  className="text-muted-foreground"
-                  tick={{ fill: "hsl(var(--muted-foreground))" }}
-                />
-                <ChartTooltip content={<ChartTooltipContent indicator="line" />} />
-                <Line 
-                  type="monotone" 
-                  dataKey="filed" 
-                  stroke="hsl(var(--primary))" 
-                  strokeWidth={3}
-                  dot={{ fill: "hsl(var(--primary))", r: 5 }}
-                  activeDot={{ r: 7 }}
-                  animationDuration={1500}
-                  animationBegin={0}
-                />
-                <Line 
-                  type="monotone" 
-                  dataKey="granted" 
-                  stroke="hsl(var(--accent))" 
-                  strokeWidth={3}
-                  dot={{ fill: "hsl(var(--accent))", r: 5 }}
-                  activeDot={{ r: 7 }}
-                  animationDuration={1500}
-                  animationBegin={300}
-                />
-              </LineChart>
-            </ResponsiveContainer>
-          </div>
+          <ChartContainer config={chartConfig} className="w-full h-[400px]">
+            <LineChart data={chartData} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+              <CartesianGrid strokeDasharray="3 3" className="stroke-muted" opacity={0.3} />
+              <XAxis 
+                dataKey="year" 
+                className="text-muted-foreground"
+                tick={{ fill: "hsl(var(--muted-foreground))" }}
+              />
+              <YAxis 
+                className="text-muted-foreground"
+                tick={{ fill: "hsl(var(--muted-foreground))" }}
+              />
+              <ChartTooltip content={<ChartTooltipContent indicator="line" />} />
+              <Line 
+                type="monotone" 
+                dataKey="filed" 
+                stroke="hsl(var(--primary))" 
+                strokeWidth={3}
+                dot={{ fill: "hsl(var(--primary))", r: 5 }}
+                activeDot={{ r: 7 }}
+                animationDuration={1500}
+                animationBegin={0}
+              />
+              <Line 
+                type="monotone" 
+                dataKey="granted" 
+                stroke="hsl(var(--accent))" 
+                strokeWidth={3}
+                dot={{ fill: "hsl(var(--accent))", r: 5 }}
+                activeDot={{ r: 7 }}
+                animationDuration={1500}
+                animationBegin={300}
+              />
+            </LineChart>
+          </ChartContainer>
         </div>
 
         <div className="flex justify-center mb-8 patent_button">

@@ -1,6 +1,6 @@
 import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
-import { Home, ArrowLeft } from "lucide-react";
+import { Home } from "lucide-react";
 import errorImage from "../assets/404-error.png";
 
 const NotFound = () => {
@@ -11,56 +11,62 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5 flex flex-col items-center justify-center px-4 py-12">
-      <div className="max-w-4xl w-full">
-        {/* Header */}
-        <div className="text-center mb-8 animate-fade-in">
-          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 border-2 border-primary/20 mb-6">
-            <span className="text-5xl font-bold text-primary">!</span>
+    <div className="min-h-screen bg-background flex items-center justify-center p-6">
+      <div className="w-full max-w-5xl">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Left side - Image */}
+          <div className="order-2 md:order-1 animate-fade-in">
+            <img 
+              src={errorImage} 
+              alt="404 Error" 
+              className="w-full h-auto drop-shadow-2xl"
+            />
           </div>
-          <h1 className="text-8xl md:text-9xl font-bold text-primary mb-4 tracking-tight">
-            404
-          </h1>
-          <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
-            Page Not Found
-          </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Oops! It seems like you've ventured into uncharted territory. The page you're looking for doesn't exist or has been moved.
-          </p>
-        </div>
 
-        {/* Large Error Image */}
-        <div className="mb-12 animate-scale-in">
-          <img 
-            src={errorImage} 
-            alt="404 Error Illustration" 
-            className="w-full max-w-3xl mx-auto drop-shadow-2xl"
-          />
-        </div>
+          {/* Right side - Content */}
+          <div className="order-1 md:order-2 space-y-6 animate-scale-in">
+            <div className="space-y-4">
+              <div className="inline-block px-4 py-2 bg-primary/10 rounded-full">
+                <span className="text-sm font-semibold text-primary">Error 404</span>
+              </div>
+              
+              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-foreground leading-tight">
+                Oops!
+              </h1>
+              
+              <h2 className="text-2xl md:text-3xl font-semibold text-foreground">
+                Page Not Found
+              </h2>
+              
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                The page you're looking for doesn't exist. It might have been moved or deleted. 
+                Let's get you back on track.
+              </p>
+            </div>
 
-        {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in">
-          <Link 
-            to="/" 
-            className="group inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-xl font-semibold hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
-          >
-            <Home className="w-5 h-5 group-hover:scale-110 transition-transform" />
-            Back to Home
-          </Link>
-          <button 
-            onClick={() => window.history.back()}
-            className="group inline-flex items-center gap-2 px-8 py-4 bg-card text-card-foreground border-2 border-border rounded-xl font-semibold hover:bg-accent hover:text-accent-foreground transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105"
-          >
-            <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-            Go Back
-          </button>
-        </div>
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <Link 
+                to="/" 
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:opacity-90 transition-all duration-200 shadow-lg hover:shadow-xl"
+              >
+                <Home className="w-5 h-5" />
+                Back to Home
+              </Link>
+              
+              <button 
+                onClick={() => window.history.back()}
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground rounded-lg font-medium hover:bg-secondary/80 transition-all duration-200"
+              >
+                Go Back
+              </button>
+            </div>
 
-        {/* Additional Info */}
-        <div className="mt-12 text-center animate-fade-in">
-          <p className="text-sm text-muted-foreground">
-            Error Code: <span className="font-mono text-primary">404</span> | Path: <span className="font-mono text-muted-foreground">{location.pathname}</span>
-          </p>
+            <div className="pt-8 border-t border-border">
+              <p className="text-sm text-muted-foreground">
+                <span className="font-medium">Path:</span> {location.pathname}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

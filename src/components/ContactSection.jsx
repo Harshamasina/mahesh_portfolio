@@ -23,14 +23,14 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="section">
+    <section id="contact" className="section" aria-labelledby="contact-heading">
       <div className="section-container">
-        <h2 className="section-title">
-          <Mail className="icon-lg" />
+        <h2 id="contact-heading" className="section-title">
+          <Mail className="icon-lg" aria-hidden="true" />
           Get in Touch
         </h2>
         <p className="section-subtitle">
-          Interested in collaboration, consultation, or just want to connect?
+          Interested in collaboration, consultation, or discussing biotechnology innovations? Connect with Mahesh Kandula for opportunities in drug discovery, pharmaceutical partnerships, and life sciences ventures.
         </p>
         <div className="glass-card contact-card stagger-item">
           <form onSubmit={handleSubmit} className="contact-form">

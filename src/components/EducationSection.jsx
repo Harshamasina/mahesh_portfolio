@@ -2,14 +2,14 @@ import { GraduationCap, Scale, Briefcase, Target, Dna, FlaskConical } from "luci
 
 const EducationSection = () => {
   return (
-    <section id="education" className="section">
+    <section id="education" className="section" aria-labelledby="education-heading">
       <div className="section-container">
-        <h2 className="section-title">
-          <GraduationCap className="icon-lg" />
+        <h2 id="education-heading" className="section-title">
+          <GraduationCap className="icon-lg" aria-hidden="true" />
           Education
         </h2>
         <p className="section-subtitle">
-          Academic foundations in Biotechnology, Laws - LLB, LLM and MBA 
+          Academic foundations spanning Biotechnology, Law (LLB, LLM), and Business Administration (MBA). Interdisciplinary education from world-renowned institutions including IIT Kharagpur, Babson College, University of Edinburgh, and Stanford University.
         </p>
         <div className="education-grid">
           <div className="glass-card education-card stagger-item">

@@ -2,7 +2,7 @@ import { Dna, FlaskConical, Mail, Sparkles, Microscope, Beaker } from "lucide-re
 
 const HeroSection = () => {
   return (
-    <section id="about" className="section hero-section">
+    <section id="about" className="section hero-section" aria-label="About Mahesh Kandula">
       {/* Animated Biotech Vector Graphics */}
       <div className="hero-vectors">
         <svg className="hero-vector hero-vector-1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -56,24 +56,24 @@ const HeroSection = () => {
       </div>
 
       <div className="section-container">
-        <div className="fade-in-up">
+        <article className="fade-in-up">
           <h1 className="hero-title">
-            <Dna className="inline-block icon-lg animate-pulse-glow" />
+            <Dna className="inline-block icon-lg animate-pulse-glow" aria-hidden="true" />
             Mahesh Kandula
           </h1>
           <p className="hero-subtitle">
-            <FlaskConical className="icon-md" />
+            <FlaskConical className="icon-md" aria-hidden="true" />
             Inventor and Entrepreneur
-            <Sparkles className="icon-md" />
+            <Sparkles className="icon-md" aria-hidden="true" />
           </p>
           <p className="hero-description">
-            I'm an entrepreneur and scientist with a proven record of creating transformative life sciences ventures. As the sole inventor of 100+ novel drug molecules across major therapeutic areas, I’ve advanced innovations from discovery to clinical trials. With multiple patents and global pharma collaborations, I bring expertise in IP, strategy, and team leadership to drive bold ideas into real-world therapies.
+            I'm an entrepreneur and scientist with a proven record of creating transformative life sciences ventures. As the sole inventor of 100+ novel drug molecules across major therapeutic areas, I've advanced innovations from discovery to clinical trials. With multiple patents and global pharma collaborations, I bring expertise in IP, strategy, and team leadership to drive bold ideas into real-world therapies.
           </p>
-          <a href="#contact" className="hero-cta">
-            <Mail className="icon-sm" />
+          <a href="#contact" className="hero-cta" aria-label="Contact Mahesh Kandula">
+            <Mail className="icon-sm" aria-hidden="true" />
             Get in Touch
           </a>
-        </div>
+        </article>
       </div>
     </section>
   );

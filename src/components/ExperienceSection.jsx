@@ -2,14 +2,14 @@ import { Briefcase, Calendar, Building2, Target, TrendingUp, Microscope } from "
 
 const ExperienceSection = () => {
   return (
-    <section id="experience" className="section">
+    <section id="experience" className="section" aria-labelledby="experience-heading">
       <div className="section-container">
-        <h2 className="section-title">
-          <Briefcase className="icon-lg" />
+        <h2 id="experience-heading" className="section-title">
+          <Briefcase className="icon-lg" aria-hidden="true" />
           Professional Experience
         </h2>
         <p className="section-subtitle">
-          Leadership roles and contributions to biotechnology advancement
+          Leadership roles driving biotechnology innovation and pharmaceutical development. Over 15 years of experience in drug discovery, patent portfolio management, and building successful life sciences ventures.
         </p>
         <div className="glass-card stagger-item">
           <div className="experience-timeline">

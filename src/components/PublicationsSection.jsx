@@ -3,14 +3,14 @@ import { Button } from "./ui/button";
 
 const PublicationsSection = () => {
   return (
-    <section id="publications" className="section">
+    <section id="publications" className="section" aria-labelledby="publications-heading">
       <div className="section-container">
-        <h2 className="section-title">
-          <BookOpen className="icon-lg" />
+        <h2 id="publications-heading" className="section-title">
+          <BookOpen className="icon-lg" aria-hidden="true" />
           Key Publications
         </h2>
         <p className="section-subtitle">
-          Peer-reviewed research contributions to scientific literature
+          Peer-reviewed research contributions in drug discovery, cancer research, and biotechnology. Published in leading scientific journals including European Society of Medicine, American Society of Clinical Oncology, and Asian Pacific Journal of Cancer Prevention.
         </p>
         <div className="publications-list">
           <div className="glass-card publication-item stagger-item">
@@ -21,7 +21,7 @@ const PublicationsSection = () => {
             <div className="publication-authors">
               European Society of Medicine · Apr 28, 2025
             </div>
-            <a href="https://esmed.org/MRA/mra/article/view/6224" target="_blank" rel="noopener noreferrer">
+            <a href="https://esmed.org/MRA/mra/article/view/6224" target="_blank" rel="noopener noreferrer" aria-label="View publication on CLX-155A preclinical evaluation">
               View Publication
             </a>
             <p>CLX-155A demonstrated a significant dose-dependent tumor growth (p less than 0.05) inhibition versus vehicle and was comparable to capecitabine. The evaluation of its single-dose pharmacokinetic profile reflected defined peaks for 5-FU and its precursors (5’-DFCR, 5’-DFCR), higher area under the curve (AUC) versus capecitabine, sustained release characteristics, and defined peaks and AUCs for valproic acid.</p>

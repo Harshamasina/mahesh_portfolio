@@ -3,18 +3,18 @@ import { Button } from "./ui/button";
 
 const PatentsSection = () => {
   return (
-    <section id="patents" className="section">
+    <section id="patents" className="section" aria-labelledby="patents-heading">
       <div className="section-container">
-        <h2 className="section-title">
-          <Award className="icon-lg" />
+        <h2 id="patents-heading" className="section-title">
+          <Award className="icon-lg" aria-hidden="true" />
           Patents
         </h2>
         <p className="section-subtitle">
-          Intellectual property contributions to biotechnology innovation
+          Extensive intellectual property portfolio covering novel drug molecules and therapeutic approaches. Multiple granted patents in cancer treatment, pain management, diabetes, neurodegenerative diseases, and metabolic disorders.
         </p>
         
         <div className="flex justify-center mb-8 patent_button">
-          <a href="https://patents.justia.com/inventor/mahesh-kandula" target="_blank" rel="noopener noreferrer">
+          <a href="https://patents.justia.com/inventor/mahesh-kandula" target="_blank" rel="noopener noreferrer" aria-label="View all patents by Mahesh Kandula on Justia">
             View All Patents
           </a>
         </div>

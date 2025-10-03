@@ -16,49 +16,74 @@ const ExperienceSection = () => {
             <div className="experience-item">
               <div className="experience-period">
                 <Calendar className="icon-sm" />
-                2020 - Present
+                Sep 2022 - Apr 2025
               </div>
               <h3 className="experience-title">
                 <Target className="icon-sm" />
-                Founder & Chief Executive Officer
+                Board Member
               </h3>
               <div className="experience-company">
                 <Building2 className="inline-block icon-sm mr-1" />
-                [Your Biotech Company]
+                Cellix Bio
               </div>
               <p className="experience-description">
-                Leading a team of scientists and researchers in developing
-                novel therapeutic approaches for [disease area]. Secured $[X]M
-                in funding and established strategic partnerships with leading
-                pharmaceutical companies.
+                Cellix Bio is an innovative drug design and development bio-pharmaceutical company focused to develop best-in-class therapies for the treatment of Neurological, Inflammatory and Metabolic Diseases.
+              </p>
+              <p className="experience-description">
+                Using our proprietary technologies and strong scientific platform “Synergix”; new and effective medicines are being developed that modulate more than one target in the disease pathway while minimizing as much risk as possible from the discovery and development process.
               </p>
             </div>
 
             <div className="experience-item">
               <div className="experience-period">
                 <Calendar className="icon-sm" />
-                2015 - 2020
+                Sep 2014 - Sep 2022
               </div>
               <h3 className="experience-title">
                 <TrendingUp className="icon-sm" />
-                Vice President of Research & Development
+                Managing Director & CEO
               </h3>
               <div className="experience-company">
                 <Building2 className="inline-block icon-sm mr-1" />
-                [Previous Company]
+                Cellix Bio
               </div>
               <p className="experience-description">
-                Directed R&D operations for a portfolio of [X] pipeline assets.
-                Led cross-functional teams in advancing multiple drug
-                candidates from discovery through clinical trials. Achieved IND
-                approval for [X] compounds.
+                Leading a team of scientists and researchers in developing
+                novel therapeutic approaches for Thrombosis, Lipid Disorders, Diabetes, CNS Diseases, Asthma and Cancer.
+              </p>
+              <p className="experience-description">
+                We select drugs known for their demonstrated efficacy and clinical safety along the targeted biological pathway, and use our proprietary synergix technology platform to produce new medicines that modulate the disease pathway with enhanced safety and efficacy profile.
               </p>
             </div>
 
             <div className="experience-item">
               <div className="experience-period">
                 <Calendar className="icon-sm" />
-                2010 - 2015
+                Jan 2011 - Jan 2014
+              </div>
+              <h3 className="experience-title">
+                <Microscope className="icon-sm" />
+                Senior Research Scientist
+              </h3>
+              <div className="experience-company">
+                <Building2 className="inline-block icon-sm mr-1" />
+                Krisani Biosciences
+              </div>
+              <p className="experience-description">
+                Served as CEO & CSO for Krisani Biosciences, a drug design and development company. Within 3 years from the date of inception of KrisaniBio, a strategic collaboration with a global drug development company, Aizant was accomplished to advance the lead candidates in to clinical phase and commercialization. 
+              </p>
+              <p className="experience-description">
+                Inventor of 7 potential new molecular entities for the treatment of Wilson's disease, Hypertriglyceridemia, Cystinosis, Fatty Liver, Cancer, Neuropathic Pain and Huntington's Disease. 
+              </p>
+              <p className="experience-description">
+                Inventor of molecular diagnostic assays for the early and late stage detection of multiple types of cancer from a blood sample. A collaboration alliance had been established with a globally renowned cancer hospital, Indo-American Oncology Hospital and NIMS in Hyderabad, India for the further clinical validation and submission to US-FDA, 510 (k) clearance.
+              </p>
+            </div>
+
+            <div className="experience-item">
+              <div className="experience-period">
+                <Calendar className="icon-sm" />
+                Oct 2006 - Feb 2010
               </div>
               <h3 className="experience-title">
                 <Microscope className="icon-sm" />
@@ -69,10 +94,10 @@ const ExperienceSection = () => {
                 [Research Institution]
               </div>
               <p className="experience-description">
-                Conducted groundbreaking research in [specific area]. Published
-                [X] peer-reviewed articles and contributed to [X] patent
-                applications. Mentored junior researchers and graduate
-                students.
+                Served as an Associate Director of Global Research & Development and was responsible for global drug design and development as well as intellectual property portfolio management while I was working for Indigene Pharma located in Westborough, MA, USA.
+              </p>
+              <p className="experience-description">
+                 Co-inventor of aminoguanidine derivatives for the treatment of diabetic complications and Other chronic diseases and a Bio-technology based process technology for the production of Lipoic acid using G. Oxydans 621H.
               </p>
             </div>
           </div>

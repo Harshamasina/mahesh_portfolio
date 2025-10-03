@@ -672,6 +672,7 @@ html {
   align-items: center;
   font-size: 20px;
   color: var(--accent);
+  margin-top: 20px;
 }
 
 .patent_button a:hover{

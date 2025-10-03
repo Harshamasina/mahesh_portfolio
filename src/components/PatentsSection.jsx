@@ -219,8 +219,8 @@ const PatentsSection = () => {
         </div>
 
         <div className="flex justify-center mb-8 patent_button">
-          <a href="https://patents.justia.com/inventor/mahesh-kandula" target="_blank" rel="noopener noreferrer" aria-label="View all patents by Mahesh Kandula on Justia">
-            View All Patents
+          <a href="https://insights.greyb.com/mahesh-kandula-patents/" target="_blank" rel="noopener noreferrer" aria-label="View all stats by Mahesh Kandula on GreyB">
+            View More Stats
           </a>
         </div>
 
@@ -422,6 +422,12 @@ const PatentsSection = () => {
               <CheckCircle2 className="icon-sm" /> Granted
             </span>
           </div>
+        </div>
+
+        <div className="flex justify-center mb-8 patent_button">
+          <a href="https://patents.justia.com/inventor/mahesh-kandula" target="_blank" rel="noopener noreferrer" aria-label="View all patents by Mahesh Kandula on Justia">
+            View All Patents
+          </a>
         </div>
       </div>
     </section>

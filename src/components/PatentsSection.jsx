@@ -39,13 +39,12 @@ const PatentsSection = () => {
             <ResponsiveContainer width="100%" height="100%">
               <LineChart 
                 data={chartData} 
-                margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+                margin={{ top: 10, right: 30, left: 20, bottom: 10 }}
               >
                 <CartesianGrid 
                   strokeDasharray="3 3" 
                   stroke="hsl(var(--border))" 
                   opacity={0.3}
-                  strokeWidth={1}
                 />
                 <XAxis 
                   dataKey="year" 
@@ -67,73 +66,64 @@ const PatentsSection = () => {
                     borderRadius: '12px',
                     color: 'hsl(var(--foreground))',
                     padding: '12px',
-                    boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
-                    backdropFilter: 'blur(10px)'
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
                   }}
                   labelStyle={{
                     color: 'hsl(var(--primary))',
                     fontWeight: 'bold',
                     marginBottom: '8px'
                   }}
-                  itemStyle={{
-                    color: 'hsl(var(--foreground))',
-                    padding: '4px 0'
-                  }}
-                  cursor={{ stroke: 'hsl(var(--primary))', strokeWidth: 1, strokeDasharray: '5 5' }}
                 />
                 <Legend 
                   wrapperStyle={{
                     paddingTop: '20px',
-                    fontSize: '14px',
-                    fontWeight: '500'
+                    fontSize: '14px'
                   }}
                   iconType="line"
+                  iconSize={20}
                 />
                 <Line 
                   type="monotone" 
                   dataKey="filed" 
                   name="Applications Filed"
-                  stroke="hsl(var(--primary))" 
-                  strokeWidth={3}
+                  stroke="#37875A"
+                  strokeWidth={4}
                   dot={{ 
-                    fill: "hsl(var(--primary))", 
+                    fill: "#37875A", 
                     strokeWidth: 2,
-                    r: 5,
-                    stroke: "hsl(var(--background))"
+                    r: 6,
+                    stroke: "#ffffff"
                   }}
                   activeDot={{ 
-                    r: 8,
-                    fill: "hsl(var(--primary))",
-                    stroke: "hsl(var(--background))",
+                    r: 9,
+                    fill: "#37875A",
+                    stroke: "#ffffff",
                     strokeWidth: 3
                   }}
-                  animationDuration={2000}
+                  animationDuration={1500}
                   animationEasing="ease-in-out"
-                  animationBegin={0}
-                  connectNulls
                 />
                 <Line 
                   type="monotone" 
                   dataKey="granted" 
                   name="Patents Granted"
-                  stroke="hsl(var(--accent))" 
-                  strokeWidth={3}
+                  stroke="#55AF78"
+                  strokeWidth={4}
                   dot={{ 
-                    fill: "hsl(var(--accent))", 
+                    fill: "#55AF78", 
                     strokeWidth: 2,
-                    r: 5,
-                    stroke: "hsl(var(--background))"
+                    r: 6,
+                    stroke: "#ffffff"
                   }}
                   activeDot={{ 
-                    r: 8,
-                    fill: "hsl(var(--accent))",
-                    stroke: "hsl(var(--background))",
+                    r: 9,
+                    fill: "#55AF78",
+                    stroke: "#ffffff",
                     strokeWidth: 3
                   }}
-                  animationDuration={2000}
+                  animationDuration={1500}
                   animationEasing="ease-in-out"
-                  animationBegin={300}
-                  connectNulls
+                  animationBegin={200}
                 />
               </LineChart>
             </ResponsiveContainer>

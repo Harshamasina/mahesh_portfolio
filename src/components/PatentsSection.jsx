@@ -41,16 +41,6 @@ const PatentsSection = () => {
                 data={chartData} 
                 margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
               >
-                <defs>
-                  <linearGradient id="colorFiled" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="hsl(var(--primary))" stopOpacity={0.3}/>
-                    <stop offset="95%" stopColor="hsl(var(--primary))" stopOpacity={0}/>
-                  </linearGradient>
-                  <linearGradient id="colorGranted" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="hsl(var(--accent))" stopOpacity={0.3}/>
-                    <stop offset="95%" stopColor="hsl(var(--accent))" stopOpacity={0}/>
-                  </linearGradient>
-                </defs>
                 <CartesianGrid 
                   strokeDasharray="3 3" 
                   stroke="hsl(var(--border))" 
@@ -105,23 +95,22 @@ const PatentsSection = () => {
                   name="Applications Filed"
                   stroke="hsl(var(--primary))" 
                   strokeWidth={3}
-                  fill="url(#colorFiled)"
                   dot={{ 
                     fill: "hsl(var(--primary))", 
                     strokeWidth: 2,
-                    r: 4,
+                    r: 5,
                     stroke: "hsl(var(--background))"
                   }}
                   activeDot={{ 
                     r: 8,
                     fill: "hsl(var(--primary))",
                     stroke: "hsl(var(--background))",
-                    strokeWidth: 3,
-                    filter: 'drop-shadow(0 0 8px hsl(var(--primary)))'
+                    strokeWidth: 3
                   }}
                   animationDuration={2000}
                   animationEasing="ease-in-out"
                   animationBegin={0}
+                  connectNulls
                 />
                 <Line 
                   type="monotone" 
@@ -129,23 +118,22 @@ const PatentsSection = () => {
                   name="Patents Granted"
                   stroke="hsl(var(--accent))" 
                   strokeWidth={3}
-                  fill="url(#colorGranted)"
                   dot={{ 
                     fill: "hsl(var(--accent))", 
                     strokeWidth: 2,
-                    r: 4,
+                    r: 5,
                     stroke: "hsl(var(--background))"
                   }}
                   activeDot={{ 
                     r: 8,
                     fill: "hsl(var(--accent))",
                     stroke: "hsl(var(--background))",
-                    strokeWidth: 3,
-                    filter: 'drop-shadow(0 0 8px hsl(var(--accent)))'
+                    strokeWidth: 3
                   }}
                   animationDuration={2000}
                   animationEasing="ease-in-out"
                   animationBegin={300}
+                  connectNulls
                 />
               </LineChart>
             </ResponsiveContainer>

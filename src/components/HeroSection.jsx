@@ -8,8 +8,8 @@ const HeroSection = () => {
         <svg className="hero-vector hero-vector-1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="moleculeGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style={{ stopColor: 'rgba(55, 135, 90, 0.6)' }} />
-              <stop offset="100%" style={{ stopColor: 'rgba(55, 135, 90, 0.2)' }} />
+              <stop offset="0%" style={{ stopColor: 'rgba(59, 130, 246, 0.6)' }} />
+              <stop offset="100%" style={{ stopColor: 'rgba(59, 130, 246, 0.2)' }} />
             </linearGradient>
           </defs>
           <circle cx="100" cy="50" r="15" fill="url(#moleculeGrad1)" />
@@ -25,8 +25,8 @@ const HeroSection = () => {
         <svg className="hero-vector hero-vector-2" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="dnaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style={{ stopColor: 'rgba(55, 135, 90, 0.5)' }} />
-              <stop offset="100%" style={{ stopColor: 'rgba(55, 135, 90, 0.1)' }} />
+              <stop offset="0%" style={{ stopColor: 'rgba(59, 130, 246, 0.5)' }} />
+              <stop offset="100%" style={{ stopColor: 'rgba(59, 130, 246, 0.1)' }} />
             </linearGradient>
           </defs>
           <path d="M 30 75 Q 50 50, 70 75 T 110 75" stroke="url(#dnaGrad)" strokeWidth="3" fill="none" />
@@ -41,8 +41,8 @@ const HeroSection = () => {
         <svg className="hero-vector hero-vector-3" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="cellGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style={{ stopColor: 'rgba(55, 135, 90, 0.4)' }} />
-              <stop offset="100%" style={{ stopColor: 'rgba(55, 135, 90, 0.15)' }} />
+              <stop offset="0%" style={{ stopColor: 'rgba(59, 130, 246, 0.4)' }} />
+              <stop offset="100%" style={{ stopColor: 'rgba(59, 130, 246, 0.15)' }} />
             </linearGradient>
           </defs>
           <circle cx="90" cy="90" r="60" stroke="url(#cellGrad)" strokeWidth="2" fill="none" opacity="0.6" />

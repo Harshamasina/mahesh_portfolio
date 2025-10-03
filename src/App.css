@@ -3,14 +3,14 @@
 /* Root & Layout */
 #root {
   min-height: 100vh;
-  background: linear-gradient(135deg, var(--background) 0%, hsl(145, 25%, 95%) 100%);
+  background: linear-gradient(135deg, var(--background) 0%, hsl(210, 30%, 95%) 100%);
   transition: background 0.3s ease;
   position: relative;
   overflow-x: hidden;
 }
 
 .dark #root {
-  background: linear-gradient(135deg, hsl(145, 15%, 10%) 0%, hsl(145, 20%, 8%) 100%);
+  background: linear-gradient(135deg, hsl(215, 25%, 10%) 0%, hsl(220, 30%, 8%) 100%);
 }
 
 /* DNA Vector Background */
@@ -32,22 +32,22 @@
 
 /* DNA Gradient Stops */
 .dna-gradient-start {
-  stop-color: rgba(55, 135, 90, 0.5);
+  stop-color: rgba(59, 130, 246, 0.5);
   stop-opacity: 1;
 }
 
 .dna-gradient-end {
-  stop-color: rgba(55, 135, 90, 0.15);
+  stop-color: rgba(59, 130, 246, 0.15);
   stop-opacity: 1;
 }
 
 .dark .dna-gradient-start {
-  stop-color: rgba(85, 175, 120, 0.6);
+  stop-color: rgba(96, 165, 250, 0.6);
   stop-opacity: 1;
 }
 
 .dark .dna-gradient-end {
-  stop-color: rgba(85, 175, 120, 0.2);
+  stop-color: rgba(96, 165, 250, 0.2);
   stop-opacity: 1;
 }
 
@@ -81,14 +81,14 @@ html {
   z-index: 1000;
   backdrop-filter: blur(20px) saturate(180%);
   background: rgba(255, 255, 255, 0.6);
-  border-bottom: 1px solid rgba(145, 180, 155, 0.3);
-  box-shadow: 0 8px 32px rgba(145, 180, 155, 0.12);
+  border-bottom: 1px solid rgba(150, 180, 230, 0.3);
+  box-shadow: 0 8px 32px rgba(150, 180, 230, 0.12);
   transition: all 0.3s ease;
 }
 
 .dark .navbar {
-  background: rgba(20, 30, 25, 0.7);
-  border-bottom: 1px solid rgba(145, 180, 155, 0.2);
+  background: rgba(20, 30, 40, 0.7);
+  border-bottom: 1px solid rgba(150, 180, 230, 0.2);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
@@ -234,11 +234,11 @@ html {
     gap: 1.5rem;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
-    border-bottom: 1px solid rgba(145, 180, 155, 0.5);
+    border-bottom: 1px solid rgba(150, 180, 230, 0.5);
   }
 
   .dark .navbar-menu {
-    background: rgba(20, 30, 25, 0.95);
+    background: rgba(20, 30, 40, 0.95);
   }
 
   .navbar-menu.open {
@@ -291,9 +291,9 @@ html {
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(20px) saturate(180%);
   border-radius: var(--radius);
-  border: 1px solid rgba(145, 180, 155, 0.3);
+  border: 1px solid rgba(150, 180, 230, 0.3);
   padding: 2rem;
-  box-shadow: 0 8px 32px rgba(145, 180, 155, 0.15),
+  box-shadow: 0 8px 32px rgba(150, 180, 230, 0.15),
               inset 0 1px 0 rgba(255, 255, 255, 0.4);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -307,7 +307,7 @@ html {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(145, 180, 155, 0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(150, 180, 230, 0.2), transparent);
   transition: left 0.6s ease;
 }
 
@@ -317,22 +317,22 @@ html {
 
 .glass-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 16px 48px rgba(145, 180, 155, 0.25),
+  box-shadow: 0 16px 48px rgba(150, 180, 230, 0.25),
               inset 0 1px 0 rgba(255, 255, 255, 0.6);
-  border-color: rgba(145, 180, 155, 0.5);
+  border-color: rgba(150, 180, 230, 0.5);
 }
 
 .dark .glass-card {
-  background: rgba(30, 45, 35, 0.6);
+  background: rgba(30, 40, 55, 0.6);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
-              inset 0 1px 0 rgba(145, 180, 155, 0.15);
-  border: 1px solid rgba(145, 180, 155, 0.2);
+              inset 0 1px 0 rgba(150, 180, 230, 0.15);
+  border: 1px solid rgba(150, 180, 230, 0.2);
 }
 
 .dark .glass-card:hover {
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5),
-              inset 0 1px 0 rgba(145, 180, 155, 0.25);
-  border-color: rgba(145, 180, 155, 0.35);
+              inset 0 1px 0 rgba(150, 180, 230, 0.25);
+  border-color: rgba(150, 180, 230, 0.35);
 }
 
 /* Icon Container */
@@ -343,16 +343,16 @@ html {
   width: 48px;
   height: 48px;
   border-radius: 12px;
-  background: rgba(55, 135, 90, 0.15);
+  background: rgba(59, 130, 246, 0.15);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(55, 135, 90, 0.25);
+  border: 1px solid rgba(59, 130, 246, 0.25);
   margin-bottom: 1rem;
   transition: all 0.4s ease;
 }
 
 .dark .icon-container {
-  background: rgba(85, 175, 120, 0.2);
-  border: 1px solid rgba(85, 175, 120, 0.3);
+  background: rgba(96, 165, 250, 0.2);
+  border: 1px solid rgba(96, 165, 250, 0.3);
 }
 
 /* Hero Section */
@@ -477,12 +477,12 @@ html {
   font-weight: 600;
   font-size: 1.125rem;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 16px rgba(55, 135, 90, 0.3);
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3);
 }
 
 .hero-cta:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(55, 135, 90, 0.4);
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4);
   background: var(--accent);
 }
 

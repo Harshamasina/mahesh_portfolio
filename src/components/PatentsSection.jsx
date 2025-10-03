@@ -125,17 +125,17 @@ const PatentsSection = () => {
                   type="monotone" 
                   dataKey="filed" 
                   name="Applications Filed"
-                  stroke="#37875A"
+                  stroke="#3b82f6"
                   strokeWidth={4}
                   dot={{ 
-                    fill: "#37875A", 
+                    fill: "#3b82f6", 
                     strokeWidth: 2,
                     r: 6,
                     stroke: "#ffffff"
                   }}
                   activeDot={{ 
                     r: 9,
-                    fill: "#37875A",
+                    fill: "#3b82f6",
                     stroke: "#ffffff",
                     strokeWidth: 3
                   }}
@@ -146,17 +146,17 @@ const PatentsSection = () => {
                   type="monotone" 
                   dataKey="granted" 
                   name="Patents Granted"
-                  stroke="#55AF78"
+                  stroke="#60a5fa"
                   strokeWidth={4}
                   dot={{ 
-                    fill: "#55AF78", 
+                    fill: "#60a5fa", 
                     strokeWidth: 2,
                     r: 6,
                     stroke: "#ffffff"
                   }}
                   activeDot={{ 
                     r: 9,
-                    fill: "#55AF78",
+                    fill: "#60a5fa",
                     stroke: "#ffffff",
                     strokeWidth: 3
                   }}
@@ -220,7 +220,7 @@ const PatentsSection = () => {
                 />
                 <Bar 
                   dataKey="patents" 
-                  fill="#37875A"
+                  fill="#3b82f6"
                   radius={[8, 8, 0, 0]}
                   animationDuration={1500}
                   animationEasing="ease-in-out"
@@ -228,7 +228,7 @@ const PatentsSection = () => {
                   {countryData.map((entry, index) => (
                     <Cell 
                       key={`cell-${index}`} 
-                      fill={index % 2 === 0 ? "#37875A" : "#55AF78"} 
+                      fill={index % 2 === 0 ? "#3b82f6" : "#60a5fa"} 
                     />
                   ))}
                 </Bar>

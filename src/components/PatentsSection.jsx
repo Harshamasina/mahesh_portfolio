@@ -15,7 +15,7 @@ const PatentsSection = () => {
         
         <div className="flex justify-center mb-8">
           <a href="https://patents.justia.com/inventor/mahesh-kandula" target="_blank" rel="noopener noreferrer">
-            <Button variant="default" size="lg">
+            <Button variant="biotech-solid" size="lg">
               <ExternalLink className="icon-sm" />
               View All Patents
             </Button>

@@ -22,7 +22,7 @@ const PublicationsSection = () => {
               European Society of Medicine · Apr 28, 2025
             </div>
             <a href="https://esmed.org/MRA/mra/article/view/6224" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" size="sm" className="mt-2">
+              <Button variant="biotech" size="sm" className="mt-2">
                 <ExternalLink className="icon-sm" />
                 View Publication
               </Button>
@@ -40,7 +40,7 @@ const PublicationsSection = () => {
               European Society of Medicine · Oct 24, 2024
             </div>
             <a href="https://esmed.org/MRA/mra/article/view/5709" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" size="sm" className="mt-2">
+              <Button variant="biotech" size="sm" className="mt-2">
                 <ExternalLink className="icon-sm" />
                 View Publication
               </Button>
@@ -57,7 +57,7 @@ const PublicationsSection = () => {
               European Society of Medicine · Jul 14, 2024
             </div>
             <a href="https://esmed.org/MRA/mra/article/view/5219" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" size="sm" className="mt-2">
+              <Button variant="biotech" size="sm" className="mt-2">
                 <ExternalLink className="icon-sm" />
                 View Publication
               </Button>
@@ -74,7 +74,7 @@ const PublicationsSection = () => {
               American Society of Clinical Oncology (ASCO) · Jun 22, 2020
             </div>
             <a href="https://meetings.asco.org/abstracts-presentations/188964" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" size="sm" className="mt-2">
+              <Button variant="biotech" size="sm" className="mt-2">
                 <ExternalLink className="icon-sm" />
                 View Publication
               </Button>
@@ -91,7 +91,7 @@ const PublicationsSection = () => {
               Asian Pacific Journal of Cancer Prevention, Vol 14, 2013 · Oct 17, 2013
             </div>
             <a href="https://journal.waocp.org/article_28078.html" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" size="sm" className="mt-2">
+              <Button variant="biotech" size="sm" className="mt-2">
                 <ExternalLink className="icon-sm" />
                 View Publication
               </Button>
@@ -109,7 +109,7 @@ const PublicationsSection = () => {
               American Journals of Cancer Science · Jun 20, 2013
             </div>
             <a href="https://pubmed.ncbi.nlm.nih.gov/15093672/" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" size="sm" className="mt-2">
+              <Button variant="biotech" size="sm" className="mt-2">
                 <ExternalLink className="icon-sm" />
                 View Publication
               </Button>
@@ -126,7 +126,7 @@ const PublicationsSection = () => {
               World J Oncol • 2013;4(3):137-141 · Mar 8, 2013
             </div>
             <a href="https://pubmed.ncbi.nlm.nih.gov/29147345/" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" size="sm" className="mt-2">
+              <Button variant="biotech" size="sm" className="mt-2">
                 <ExternalLink className="icon-sm" />
                 View Publication
               </Button>
@@ -143,7 +143,7 @@ const PublicationsSection = () => {
               J AIDS Clinic Res · Nov 9, 2012J
             </div>
             <a href="https://www.hilarispublisher.com/open-access/use-of-loop-mediated-isothermal-amplification-of-dna-for-the-rapid-detection-of-hiv-aids-related-opportunistic-infections-cmv-tb-in-clinical-specimens-2155-6113.1000154.pdf" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" size="sm" className="mt-2">
+              <Button variant="biotech" size="sm" className="mt-2">
                 <ExternalLink className="icon-sm" />
                 View Publication
               </Button>
@@ -168,7 +168,7 @@ const PublicationsSection = () => {
               Journal of Cancer Science and Therapy · Oct 29, 2012
             </div>
             <a href="http://www.omicsonline.org/1948.../pdfdownload.php?" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" size="sm" className="mt-2">
+              <Button variant="biotech" size="sm" className="mt-2">
                 <ExternalLink className="icon-sm" />
                 View Publication
               </Button>
@@ -187,7 +187,7 @@ const PublicationsSection = () => {
               The European Society of Medicine
             </div>
             <a href="https://esmed.org/MRA/mra/article/view/6224" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" size="sm" className="mt-2">
+              <Button variant="biotech" size="sm" className="mt-2">
                 <ExternalLink className="icon-sm" />
                 View Publication
               </Button>

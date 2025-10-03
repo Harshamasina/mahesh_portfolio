@@ -91,7 +91,7 @@ const ExperienceSection = () => {
               </h3>
               <div className="experience-company">
                 <Building2 className="inline-block icon-sm mr-1" />
-                [Research Institution]
+                Indigene Pharmaceuticals
               </div>
               <p className="experience-description">
                 Served as an Associate Director of Global Research & Development and was responsible for global drug design and development as well as intellectual property portfolio management while I was working for Indigene Pharma located in Westborough, MA, USA.

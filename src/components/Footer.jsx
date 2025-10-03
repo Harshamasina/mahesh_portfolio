@@ -98,7 +98,7 @@ const Footer = () => {
 
         <div className="footer-bottom">
           <p className="footer-copyright">
-            © {new Date().getFullYear()} Dr. [Your Name]. All rights reserved.
+            © {new Date().getFullYear()} Mahesh Kandula. All rights reserved.
           </p>
           <p className="footer-note">
             Dedicated to advancing human health through scientific excellence

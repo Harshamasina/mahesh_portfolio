@@ -21,6 +21,7 @@ import {
   Target,
 } from "lucide-react";
 import DarkModeToggle from "../components/DarkModeToggle";
+import ScrollToTop from "../components/ScrollToTop";
 import "../App.css";
 
 const Index = () => {
@@ -31,16 +32,14 @@ const Index = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
     alert("Thank you for your message. I will get back to you soon!");
     setFormData({ name: "", email: "", message: "" });
   };
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -49,14 +48,55 @@ const Index = () => {
 
   return (
     <div>
+      {/* DNA Vector Background */}
+      <svg className="dna-vector" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="dnaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style={{ stopColor: 'rgba(55, 135, 90, 0.4)', stopOpacity: 1 }} />
+            <stop offset="100%" style={{ stopColor: 'rgba(55, 135, 90, 0.1)', stopOpacity: 1 }} />
+          </linearGradient>
+        </defs>
+        {/* DNA Helix Structure */}
+        <path d="M 100 400 Q 200 300, 300 400 T 500 400 T 700 400 T 900 400 T 1100 400" 
+              stroke="url(#dnaGradient)" strokeWidth="3" fill="none" opacity="0.6"/>
+        <path d="M 100 400 Q 200 500, 300 400 T 500 400 T 700 400 T 900 400 T 1100 400" 
+              stroke="url(#dnaGradient)" strokeWidth="3" fill="none" opacity="0.6"/>
+        {/* DNA Base Pairs */}
+        <line x1="150" y1="350" x2="150" y2="450" stroke="url(#dnaGradient)" strokeWidth="2" opacity="0.5"/>
+        <line x1="250" y1="350" x2="250" y2="450" stroke="url(#dnaGradient)" strokeWidth="2" opacity="0.5"/>
+        <line x1="350" y1="350" x2="350" y2="450" stroke="url(#dnaGradient)" strokeWidth="2" opacity="0.5"/>
+        <line x1="450" y1="350" x2="450" y2="450" stroke="url(#dnaGradient)" strokeWidth="2" opacity="0.5"/>
+        <line x1="550" y1="350" x2="550" y2="450" stroke="url(#dnaGradient)" strokeWidth="2" opacity="0.5"/>
+        <line x1="650" y1="350" x2="650" y2="450" stroke="url(#dnaGradient)" strokeWidth="2" opacity="0.5"/>
+        <line x1="750" y1="350" x2="750" y2="450" stroke="url(#dnaGradient)" strokeWidth="2" opacity="0.5"/>
+        <line x1="850" y1="350" x2="850" y2="450" stroke="url(#dnaGradient)" strokeWidth="2" opacity="0.5"/>
+        <line x1="950" y1="350" x2="950" y2="450" stroke="url(#dnaGradient)" strokeWidth="2" opacity="0.5"/>
+        <line x1="1050" y1="350" x2="1050" y2="450" stroke="url(#dnaGradient)" strokeWidth="2" opacity="0.5"/>
+        
+        {/* Molecular Circles */}
+        <circle cx="150" cy="350" r="8" fill="url(#dnaGradient)" opacity="0.7"/>
+        <circle cx="150" cy="450" r="8" fill="url(#dnaGradient)" opacity="0.7"/>
+        <circle cx="350" cy="350" r="8" fill="url(#dnaGradient)" opacity="0.7"/>
+        <circle cx="350" cy="450" r="8" fill="url(#dnaGradient)" opacity="0.7"/>
+        <circle cx="550" cy="350" r="8" fill="url(#dnaGradient)" opacity="0.7"/>
+        <circle cx="550" cy="450" r="8" fill="url(#dnaGradient)" opacity="0.7"/>
+        <circle cx="750" cy="350" r="8" fill="url(#dnaGradient)" opacity="0.7"/>
+        <circle cx="750" cy="450" r="8" fill="url(#dnaGradient)" opacity="0.7"/>
+        <circle cx="950" cy="350" r="8" fill="url(#dnaGradient)" opacity="0.7"/>
+        <circle cx="950" cy="450" r="8" fill="url(#dnaGradient)" opacity="0.7"/>
+      </svg>
+
       {/* Dark Mode Toggle */}
       <DarkModeToggle />
+
+      {/* Scroll to Top Button */}
+      <ScrollToTop />
 
       {/* Navigation */}
       <nav className="navbar">
         <div className="navbar-container">
           <a href="#about" className="navbar-brand">
-            <Microscope className="w-6 h-6" />
+            <Microscope className="icon-md" />
             Dr. [Your Name]
           </a>
           <button
@@ -139,13 +179,13 @@ const Index = () => {
         <div className="section-container">
           <div className="fade-in-up">
             <h1 className="hero-title">
-              <Dna className="inline-block w-12 h-12 animate-pulse-glow" />
+              <Dna className="inline-block icon-lg animate-pulse-glow" />
               Dr. [Your Name]
             </h1>
             <p className="hero-subtitle">
-              <FlaskConical className="w-6 h-6" />
+              <FlaskConical className="icon-md" />
               Biotechnology Founder & Innovation Leader
-              <Sparkles className="w-6 h-6" />
+              <Sparkles className="icon-md" />
             </p>
             <p className="hero-description">
               Pioneering breakthrough solutions in molecular biology and
@@ -155,7 +195,7 @@ const Index = () => {
               scientific excellence and entrepreneurial vision.
             </p>
             <a href="#contact" className="hero-cta">
-              <Mail className="w-5 h-5" />
+              <Mail className="icon-sm" />
               Get in Touch
             </a>
           </div>
@@ -166,7 +206,7 @@ const Index = () => {
       <section id="experience" className="section">
         <div className="section-container">
           <h2 className="section-title">
-            <Briefcase className="w-10 h-10" />
+            <Briefcase className="icon-lg" />
             Professional Experience
           </h2>
           <p className="section-subtitle">
@@ -176,15 +216,15 @@ const Index = () => {
             <div className="experience-timeline">
               <div className="experience-item">
                 <div className="experience-period">
-                  <Calendar className="w-4 h-4" />
+                  <Calendar className="icon-sm" />
                   2020 - Present
                 </div>
                 <h3 className="experience-title">
-                  <Target className="w-5 h-5" />
+                  <Target className="icon-sm" />
                   Founder & Chief Executive Officer
                 </h3>
                 <div className="experience-company">
-                  <Building2 className="inline w-4 h-4 mr-1" />
+                  <Building2 className="inline-block icon-sm mr-1" />
                   [Your Biotech Company]
                 </div>
                 <p className="experience-description">
@@ -197,15 +237,15 @@ const Index = () => {
 
               <div className="experience-item">
                 <div className="experience-period">
-                  <Calendar className="w-4 h-4" />
+                  <Calendar className="icon-sm" />
                   2015 - 2020
                 </div>
                 <h3 className="experience-title">
-                  <TrendingUp className="w-5 h-5" />
+                  <TrendingUp className="icon-sm" />
                   Vice President of Research & Development
                 </h3>
                 <div className="experience-company">
-                  <Building2 className="inline w-4 h-4 mr-1" />
+                  <Building2 className="inline-block icon-sm mr-1" />
                   [Previous Company]
                 </div>
                 <p className="experience-description">
@@ -218,15 +258,15 @@ const Index = () => {
 
               <div className="experience-item">
                 <div className="experience-period">
-                  <Calendar className="w-4 h-4" />
+                  <Calendar className="icon-sm" />
                   2010 - 2015
                 </div>
                 <h3 className="experience-title">
-                  <Microscope className="w-5 h-5" />
+                  <Microscope className="icon-sm" />
                   Senior Research Scientist
                 </h3>
                 <div className="experience-company">
-                  <Building2 className="inline w-4 h-4 mr-1" />
+                  <Building2 className="inline-block icon-sm mr-1" />
                   [Research Institution]
                 </div>
                 <p className="experience-description">
@@ -245,7 +285,7 @@ const Index = () => {
       <section id="education" className="section">
         <div className="section-container">
           <h2 className="section-title">
-            <GraduationCap className="w-10 h-10" />
+            <GraduationCap className="icon-lg" />
             Education
           </h2>
           <p className="section-subtitle">
@@ -254,7 +294,7 @@ const Index = () => {
           <div className="education-grid">
             <div className="glass-card education-card stagger-item">
               <div className="icon-container mx-auto">
-                <GraduationCap className="w-6 h-6 text-primary" />
+                <GraduationCap className="icon-md text-primary" />
               </div>
               <h3 className="education-degree">
                 Ph.D. in Molecular Biology
@@ -265,7 +305,7 @@ const Index = () => {
 
             <div className="glass-card education-card stagger-item">
               <div className="icon-container mx-auto">
-                <Dna className="w-6 h-6 text-primary" />
+                <Dna className="icon-md text-primary" />
               </div>
               <h3 className="education-degree">M.S. in Biochemistry</h3>
               <div className="education-institution">[University Name]</div>
@@ -274,7 +314,7 @@ const Index = () => {
 
             <div className="glass-card education-card stagger-item">
               <div className="icon-container mx-auto">
-                <FlaskConical className="w-6 h-6 text-primary" />
+                <FlaskConical className="icon-md text-primary" />
               </div>
               <h3 className="education-degree">B.S. in Biology</h3>
               <div className="education-institution">[University Name]</div>
@@ -288,7 +328,7 @@ const Index = () => {
       <section id="publications" className="section">
         <div className="section-container">
           <h2 className="section-title">
-            <BookOpen className="w-10 h-10" />
+            <BookOpen className="icon-lg" />
             Key Publications
           </h2>
           <p className="section-subtitle">
@@ -297,7 +337,7 @@ const Index = () => {
           <div className="publications-list">
             <div className="glass-card publication-item stagger-item">
               <h3 className="publication-title">
-                <FileText className="w-5 h-5 flex-shrink-0 text-primary" />
+                <FileText className="icon-sm flex-shrink-0 text-primary" />
                 Novel Therapeutic Approach for [Disease]: Targeting [Specific
                 Pathway]
               </h3>
@@ -305,28 +345,28 @@ const Index = () => {
                 [Your Name], [Co-authors], et al.
               </div>
               <div className="publication-journal">
-                <BookOpen className="w-4 h-4" />
+                <BookOpen className="icon-sm" />
                 Nature Biotechnology, 2023 | DOI: XX.XXXX/XXXXXX
               </div>
             </div>
 
             <div className="glass-card publication-item stagger-item">
               <h3 className="publication-title">
-                <FileText className="w-5 h-5 flex-shrink-0 text-primary" />
+                <FileText className="icon-sm flex-shrink-0 text-primary" />
                 Advances in [Specific Technology]: A Comprehensive Review
               </h3>
               <div className="publication-authors">
                 [Your Name], [Co-authors], et al.
               </div>
               <div className="publication-journal">
-                <BookOpen className="w-4 h-4" />
+                <BookOpen className="icon-sm" />
                 Cell, 2022 | DOI: XX.XXXX/XXXXXX
               </div>
             </div>
 
             <div className="glass-card publication-item stagger-item">
               <h3 className="publication-title">
-                <FileText className="w-5 h-5 flex-shrink-0 text-primary" />
+                <FileText className="icon-sm flex-shrink-0 text-primary" />
                 Mechanism of Action Study: [Drug/Compound Name] in [Disease
                 Model]
               </h3>
@@ -334,21 +374,21 @@ const Index = () => {
                 [Your Name], [Co-authors], et al.
               </div>
               <div className="publication-journal">
-                <BookOpen className="w-4 h-4" />
+                <BookOpen className="icon-sm" />
                 Science, 2021 | DOI: XX.XXXX/XXXXXX
               </div>
             </div>
 
             <div className="glass-card publication-item stagger-item">
               <h3 className="publication-title">
-                <FileText className="w-5 h-5 flex-shrink-0 text-primary" />
+                <FileText className="icon-sm flex-shrink-0 text-primary" />
                 High-Throughput Screening Platform for [Application]
               </h3>
               <div className="publication-authors">
                 [Your Name], [Co-authors], et al.
               </div>
               <div className="publication-journal">
-                <BookOpen className="w-4 h-4" />
+                <BookOpen className="icon-sm" />
                 Journal of Medicinal Chemistry, 2020 | DOI: XX.XXXX/XXXXXX
               </div>
             </div>
@@ -360,7 +400,7 @@ const Index = () => {
       <section id="patents" className="section">
         <div className="section-container">
           <h2 className="section-title">
-            <Award className="w-10 h-10" />
+            <Award className="icon-lg" />
             Patents
           </h2>
           <p className="section-subtitle">
@@ -369,50 +409,50 @@ const Index = () => {
           <div className="patents-grid">
             <div className="glass-card patent-card stagger-item">
               <h3 className="patent-title">
-                <Dna className="w-5 h-5 flex-shrink-0 text-primary" />
+                <Dna className="icon-sm flex-shrink-0 text-primary" />
                 Novel Compound for Treatment of [Disease]
               </h3>
               <div className="patent-number">US Patent No. XX,XXX,XXX</div>
               <span className="patent-status">
-                <CheckCircle2 className="w-4 h-4" />
+                <CheckCircle2 className="icon-sm" />
                 Granted
               </span>
             </div>
 
             <div className="glass-card patent-card stagger-item">
               <h3 className="patent-title">
-                <FlaskConical className="w-5 h-5 flex-shrink-0 text-primary" />
+                <FlaskConical className="icon-sm flex-shrink-0 text-primary" />
                 Method and System for [Specific Application]
               </h3>
               <div className="patent-number">US Patent No. XX,XXX,XXX</div>
               <span className="patent-status">
-                <CheckCircle2 className="w-4 h-4" />
+                <CheckCircle2 className="icon-sm" />
                 Granted
               </span>
             </div>
 
             <div className="glass-card patent-card stagger-item">
               <h3 className="patent-title">
-                <Microscope className="w-5 h-5 flex-shrink-0 text-primary" />
+                <Microscope className="icon-sm flex-shrink-0 text-primary" />
                 Therapeutic Composition for [Medical Use]
               </h3>
               <div className="patent-number">
                 Patent Application No. XX/XXX,XXX
               </div>
               <span className="patent-status">
-                <TrendingUp className="w-4 h-4" />
+                <TrendingUp className="icon-sm" />
                 Pending
               </span>
             </div>
 
             <div className="glass-card patent-card stagger-item">
               <h3 className="patent-title">
-                <Target className="w-5 h-5 flex-shrink-0 text-primary" />
+                <Target className="icon-sm flex-shrink-0 text-primary" />
                 Diagnostic Platform for Early Detection of [Condition]
               </h3>
               <div className="patent-number">PCT/USXXXX/XXXXX</div>
               <span className="patent-status">
-                <TrendingUp className="w-4 h-4" />
+                <TrendingUp className="icon-sm" />
                 Pending
               </span>
             </div>
@@ -424,7 +464,7 @@ const Index = () => {
       <section id="featured" className="section">
         <div className="section-container">
           <h2 className="section-title">
-            <Sparkles className="w-10 h-10" />
+            <Sparkles className="icon-lg" />
             Featured & Awards
           </h2>
           <p className="section-subtitle">
@@ -433,7 +473,7 @@ const Index = () => {
           <div className="featured-grid">
             <div className="glass-card featured-card stagger-item">
               <div className="featured-icon">
-                <Award className="w-16 h-16 text-primary mx-auto" />
+                <Award className="icon-xl text-primary mx-auto" />
               </div>
               <h3 className="featured-title">Innovator of the Year Award</h3>
               <p className="featured-description">
@@ -444,7 +484,7 @@ const Index = () => {
 
             <div className="glass-card featured-card stagger-item">
               <div className="featured-icon">
-                <FileText className="w-16 h-16 text-primary mx-auto" />
+                <FileText className="icon-xl text-primary mx-auto" />
               </div>
               <h3 className="featured-title">Featured in Forbes</h3>
               <p className="featured-description">
@@ -455,7 +495,7 @@ const Index = () => {
 
             <div className="glass-card featured-card stagger-item">
               <div className="featured-icon">
-                <Users className="w-16 h-16 text-primary mx-auto" />
+                <Users className="icon-xl text-primary mx-auto" />
               </div>
               <h3 className="featured-title">Keynote Speaker</h3>
               <p className="featured-description">
@@ -466,7 +506,7 @@ const Index = () => {
 
             <div className="glass-card featured-card stagger-item">
               <div className="featured-icon">
-                <TrendingUp className="w-16 h-16 text-primary mx-auto" />
+                <TrendingUp className="icon-xl text-primary mx-auto" />
               </div>
               <h3 className="featured-title">NIH Research Grant</h3>
               <p className="featured-description">
@@ -482,7 +522,7 @@ const Index = () => {
       <section id="contact" className="section">
         <div className="section-container">
           <h2 className="section-title">
-            <Mail className="w-10 h-10" />
+            <Mail className="icon-lg" />
             Contact
           </h2>
           <p className="section-subtitle">
@@ -493,7 +533,7 @@ const Index = () => {
               <form className="contact-form" onSubmit={handleSubmit}>
                 <div className="form-group">
                   <label htmlFor="name" className="form-label">
-                    <User className="w-4 h-4" />
+                    <User className="icon-sm" />
                     Name
                   </label>
                   <input
@@ -509,7 +549,7 @@ const Index = () => {
 
                 <div className="form-group">
                   <label htmlFor="email" className="form-label">
-                    <Mail className="w-4 h-4" />
+                    <Mail className="icon-sm" />
                     Email
                   </label>
                   <input
@@ -525,7 +565,7 @@ const Index = () => {
 
                 <div className="form-group">
                   <label htmlFor="message" className="form-label">
-                    <FileText className="w-4 h-4" />
+                    <FileText className="icon-sm" />
                     Message
                   </label>
                   <textarea
@@ -539,7 +579,7 @@ const Index = () => {
                 </div>
 
                 <button type="submit" className="form-button">
-                  <Send className="w-5 h-5" />
+                  <Send className="icon-sm" />
                   Send Message
                 </button>
               </form>
@@ -547,7 +587,7 @@ const Index = () => {
               <div className="contact-info">
                 <h3 className="contact-info-title">Professional Contact</h3>
                 <p className="contact-info-item">
-                  <Mail className="w-4 h-4" />
+                  <Mail className="icon-sm" />
                   Email:{" "}
                   <a
                     href="mailto:contact@example.com"
@@ -557,7 +597,7 @@ const Index = () => {
                   </a>
                 </p>
                 <p className="contact-info-item">
-                  <Linkedin className="w-4 h-4" />
+                  <Linkedin className="icon-sm" />
                   LinkedIn:{" "}
                   <a
                     href="https://linkedin.com/in/yourprofile"

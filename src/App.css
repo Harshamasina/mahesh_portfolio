@@ -657,7 +657,29 @@ html {
   gap: 0.5rem;
 }
 
+.publication-item a{
+  text-decoration: none;
+  color: var(--accent);
+  transition: color 0.3s ease;
+}
+
 /* Patents Grid */
+.patent_button a{
+  text-decoration: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: var(--accent);
+}
+
+.patent_button a:hover{
+  color: var(--primary);
+  transform: translateY(-2px) scale(1.02);
+  transition: all 0.3s ease;
+}
+
 .patents-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));

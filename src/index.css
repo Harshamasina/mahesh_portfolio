@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Biotech Founder Profile - Design System Variables */
 
 :root {

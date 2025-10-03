@@ -746,6 +746,17 @@ html {
   animation: float 2s ease-in-out infinite;
 }
 
+.featured-card a{
+  text-decoration: none;
+  color: var(--accent);
+  transition: color 0.3s ease;
+}
+
+.featured-card a:hover{
+  color: var(--primary);
+  transition: 0.3s ease;
+}
+
 .featured-icon {
   font-size: 3rem;
   margin-bottom: 1rem;

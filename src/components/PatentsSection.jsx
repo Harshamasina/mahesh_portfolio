@@ -150,7 +150,7 @@ const PatentsSection = () => {
           </div>
         </div>
 
-        <div className="glass-card p-6 mb-12 animate-fade-in">
+        <div className="glass-card p-6 mb-12 mt-8 animate-fade-in">
           <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
             <Globe className="icon-sm text-primary" />
             Countries in which Mahesh Kandula Filed Patents

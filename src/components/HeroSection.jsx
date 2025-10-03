@@ -1,8 +1,10 @@
 import { Dna, FlaskConical, Mail, Sparkles, Microscope, Beaker } from "lucide-react";
+import DNAMouseTracker from "./DNAMouseTracker";
 
 const HeroSection = () => {
   return (
-    <section id="about" className="section hero-section" aria-label="About Mahesh Kandula">
+    <section id="about" className="section hero-section relative overflow-hidden" aria-label="About Mahesh Kandula">
+      <DNAMouseTracker />
       {/* Animated Biotech Vector Graphics */}
       <div className="hero-vectors">
         <svg className="hero-vector hero-vector-1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">

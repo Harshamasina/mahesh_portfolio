@@ -1,6 +1,6 @@
-import { Award, Dna, FlaskConical, Microscope, Target, CheckCircle2, TrendingUp, ExternalLink } from "lucide-react";
+import { Award, Dna, FlaskConical, Microscope, Target, CheckCircle2, TrendingUp, ExternalLink, Globe } from "lucide-react";
 import { Button } from "./ui/button";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip, Legend } from "recharts";
+import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip, Legend, Cell } from "recharts";
 
 const PatentsSection = () => {
   const chartData = [
@@ -16,6 +16,26 @@ const PatentsSection = () => {
     { year: "2021", filed: 83, granted: 37 },
     { year: "2022", filed: 39, granted: 55 },
     { year: "2023", filed: 5, granted: 16 },
+  ];
+
+  const countryData = [
+    { country: "USA", patents: 125 },
+    { country: "India", patents: 63 },
+    { country: "Singapore", patents: 62 },
+    { country: "Australia", patents: 52 },
+    { country: "Europe", patents: 51 },
+    { country: "Canada", patents: 50 },
+    { country: "Japan", patents: 48 },
+    { country: "China", patents: 33 },
+    { country: "South Africa", patents: 32 },
+    { country: "Israel", patents: 26 },
+    { country: "South Korea", patents: 23 },
+    { country: "Brazil", patents: 21 },
+    { country: "Mexico", patents: 15 },
+    { country: "Russia", patents: 15 },
+    { country: "New Zealand", patents: 13 },
+    { country: "Spain", patents: 4 },
+    { country: "Denmark", patents: 2 },
   ];
 
 
@@ -126,6 +146,74 @@ const PatentsSection = () => {
                   animationBegin={200}
                 />
               </LineChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
+
+        <div className="glass-card p-6 mb-12 animate-fade-in">
+          <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
+            <Globe className="icon-sm text-primary" />
+            Countries in which Mahesh Kandula Filed Patents
+          </h3>
+          <div className="chart-wrapper" style={{ width: '100%', height: 500 }}>
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart 
+                data={countryData} 
+                margin={{ top: 10, right: 30, left: 20, bottom: 80 }}
+              >
+                <CartesianGrid 
+                  strokeDasharray="3 3" 
+                  stroke="hsl(var(--border))" 
+                  opacity={0.3}
+                />
+                <XAxis 
+                  dataKey="country" 
+                  stroke="hsl(var(--muted-foreground))"
+                  tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 11 }}
+                  tickLine={{ stroke: "hsl(var(--border))" }}
+                  axisLine={{ stroke: "hsl(var(--border))" }}
+                  angle={-45}
+                  textAnchor="end"
+                  height={80}
+                />
+                <YAxis 
+                  stroke="hsl(var(--muted-foreground))"
+                  tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 12 }}
+                  tickLine={{ stroke: "hsl(var(--border))" }}
+                  axisLine={{ stroke: "hsl(var(--border))" }}
+                  label={{ value: 'Number of Patents', angle: -90, position: 'insideLeft', fill: 'hsl(var(--muted-foreground))' }}
+                />
+                <Tooltip 
+                  contentStyle={{
+                    backgroundColor: 'hsl(var(--card))',
+                    border: '1px solid hsl(var(--border))',
+                    borderRadius: '12px',
+                    color: 'hsl(var(--foreground))',
+                    padding: '12px',
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+                  }}
+                  labelStyle={{
+                    color: 'hsl(var(--primary))',
+                    fontWeight: 'bold',
+                    marginBottom: '8px'
+                  }}
+                  cursor={{ fill: 'hsl(var(--muted))', opacity: 0.3 }}
+                />
+                <Bar 
+                  dataKey="patents" 
+                  fill="#37875A"
+                  radius={[8, 8, 0, 0]}
+                  animationDuration={1500}
+                  animationEasing="ease-in-out"
+                >
+                  {countryData.map((entry, index) => (
+                    <Cell 
+                      key={`cell-${index}`} 
+                      fill={index % 2 === 0 ? "#37875A" : "#55AF78"} 
+                    />
+                  ))}
+                </Bar>
+              </BarChart>
             </ResponsiveContainer>
           </div>
         </div>

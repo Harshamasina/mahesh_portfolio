@@ -1,7 +1,6 @@
 import { Award, Dna, FlaskConical, Microscope, Target, CheckCircle2, TrendingUp, ExternalLink } from "lucide-react";
 import { Button } from "./ui/button";
-import { ChartContainer, ChartTooltip, ChartTooltipContent } from "./ui/chart";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from "recharts";
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip, Legend } from "recharts";
 
 const PatentsSection = () => {
   const chartData = [
@@ -19,16 +18,6 @@ const PatentsSection = () => {
     { year: "2023", filed: 5, granted: 16 },
   ];
 
-  const chartConfig = {
-    filed: {
-      label: "Applications Filed",
-      color: "hsl(var(--primary))",
-    },
-    granted: {
-      label: "Patents Granted",
-      color: "hsl(var(--accent))",
-    },
-  };
 
   return (
     <section id="patents" className="section" aria-labelledby="patents-heading">
@@ -46,41 +35,49 @@ const PatentsSection = () => {
             <TrendingUp className="icon-sm text-primary" />
             Patent Filing & Grant Trends
           </h3>
-          <ChartContainer config={chartConfig} className="aspect-auto h-[400px] w-full">
-            <LineChart data={chartData} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
-              <CartesianGrid strokeDasharray="3 3" className="stroke-muted" opacity={0.3} />
-              <XAxis 
-                dataKey="year" 
-                className="text-muted-foreground"
-                tick={{ fill: "hsl(var(--muted-foreground))" }}
-              />
-              <YAxis 
-                className="text-muted-foreground"
-                tick={{ fill: "hsl(var(--muted-foreground))" }}
-              />
-              <ChartTooltip content={<ChartTooltipContent indicator="line" />} />
-              <Line 
-                type="monotone" 
-                dataKey="filed" 
-                stroke="hsl(var(--primary))" 
-                strokeWidth={3}
-                dot={{ fill: "hsl(var(--primary))", r: 5 }}
-                activeDot={{ r: 7 }}
-                animationDuration={1500}
-                animationBegin={0}
-              />
-              <Line 
-                type="monotone" 
-                dataKey="granted" 
-                stroke="hsl(var(--accent))" 
-                strokeWidth={3}
-                dot={{ fill: "hsl(var(--accent))", r: 5 }}
-                activeDot={{ r: 7 }}
-                animationDuration={1500}
-                animationBegin={300}
-              />
-            </LineChart>
-          </ChartContainer>
+          <div style={{ width: '100%', height: 400 }}>
+            <ResponsiveContainer width="100%" height="100%">
+              <LineChart data={chartData} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.3} />
+                <XAxis 
+                  dataKey="year" 
+                  stroke="hsl(var(--muted-foreground))"
+                  tick={{ fill: "hsl(var(--muted-foreground))" }}
+                />
+                <YAxis 
+                  stroke="hsl(var(--muted-foreground))"
+                  tick={{ fill: "hsl(var(--muted-foreground))" }}
+                />
+                <Tooltip 
+                  contentStyle={{
+                    backgroundColor: 'hsl(var(--card))',
+                    border: '1px solid hsl(var(--border))',
+                    borderRadius: '8px',
+                    color: 'hsl(var(--foreground))'
+                  }}
+                />
+                <Legend />
+                <Line 
+                  type="monotone" 
+                  dataKey="filed" 
+                  name="Applications Filed"
+                  stroke="hsl(var(--primary))" 
+                  strokeWidth={3}
+                  dot={{ fill: "hsl(var(--primary))", r: 5 }}
+                  activeDot={{ r: 7 }}
+                />
+                <Line 
+                  type="monotone" 
+                  dataKey="granted" 
+                  name="Patents Granted"
+                  stroke="hsl(var(--accent))" 
+                  strokeWidth={3}
+                  dot={{ fill: "hsl(var(--accent))", r: 5 }}
+                  activeDot={{ r: 7 }}
+                />
+              </LineChart>
+            </ResponsiveContainer>
+          </div>
         </div>
 
         <div className="flex justify-center mb-8 patent_button">

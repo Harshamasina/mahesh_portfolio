@@ -17,7 +17,7 @@ const Footer = () => {
           <div className="footer-section">
             <div className="footer-brand">
               <Microscope className="icon-lg" />
-              <h3>Dr. [Your Name]</h3>
+              <h3>Mahesh Kandula</h3>
             </div>
             <p className="footer-tagline">
               Advancing biotechnology through innovation, research, and leadership
@@ -59,7 +59,7 @@ const Footer = () => {
             </h4>
             <div className="footer-social">
               <a 
-                href="https://linkedin.com/in/yourprofile" 
+                href="https://www.linkedin.com/in/mahesh-kandula1/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="social-link"
@@ -68,22 +68,13 @@ const Footer = () => {
                 <Linkedin className="icon-md" />
               </a>
               <a 
-                href="https://twitter.com/yourhandle" 
+                href="https://x.com/CelixBio" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="social-link"
                 aria-label="Twitter"
               >
                 <Twitter className="icon-md" />
-              </a>
-              <a 
-                href="https://github.com/yourprofile" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="social-link"
-                aria-label="GitHub"
-              >
-                <Github className="icon-md" />
               </a>
               <a 
                 href="https://researchgate.net/profile/yourprofile" 
@@ -93,15 +84,6 @@ const Footer = () => {
                 aria-label="ResearchGate"
               >
                 <BookOpen className="icon-md" />
-              </a>
-              <a 
-                href="https://orcid.org/your-orcid-id" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="social-link"
-                aria-label="ORCID"
-              >
-                <GraduationCap className="icon-md" />
               </a>
               <a 
                 href="mailto:your.email@example.com"

@@ -1,7 +1,35 @@
 import { Award, Dna, FlaskConical, Microscope, Target, CheckCircle2, TrendingUp, ExternalLink } from "lucide-react";
 import { Button } from "./ui/button";
+import { ChartContainer, ChartTooltip, ChartTooltipContent } from "./ui/chart";
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from "recharts";
 
 const PatentsSection = () => {
+  const chartData = [
+    { year: "2012", filed: 14, granted: 1 },
+    { year: "2013", filed: 177, granted: 1 },
+    { year: "2014", filed: 139, granted: 1 },
+    { year: "2015", filed: 33, granted: 12 },
+    { year: "2016", filed: 17, granted: 48 },
+    { year: "2017", filed: 101, granted: 12 },
+    { year: "2018", filed: 33, granted: 10 },
+    { year: "2019", filed: 91, granted: 8 },
+    { year: "2020", filed: 37, granted: 26 },
+    { year: "2021", filed: 83, granted: 37 },
+    { year: "2022", filed: 39, granted: 55 },
+    { year: "2023", filed: 5, granted: 16 },
+  ];
+
+  const chartConfig = {
+    filed: {
+      label: "Applications Filed",
+      color: "hsl(var(--primary))",
+    },
+    granted: {
+      label: "Patents Granted",
+      color: "hsl(var(--accent))",
+    },
+  };
+
   return (
     <section id="patents" className="section" aria-labelledby="patents-heading">
       <div className="section-container">
@@ -13,6 +41,50 @@ const PatentsSection = () => {
           Extensive intellectual property portfolio covering novel drug molecules and therapeutic approaches. Multiple granted patents in cancer treatment, pain management, diabetes, neurodegenerative diseases, and metabolic disorders.
         </p>
         
+        <div className="glass-card p-6 mb-12 animate-fade-in">
+          <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
+            <TrendingUp className="icon-sm text-primary" />
+            Patent Filing & Grant Trends
+          </h3>
+          <ChartContainer config={chartConfig} className="h-[400px] w-full">
+            <ResponsiveContainer width="100%" height="100%">
+              <LineChart data={chartData} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+                <CartesianGrid strokeDasharray="3 3" className="stroke-muted" opacity={0.3} />
+                <XAxis 
+                  dataKey="year" 
+                  className="text-muted-foreground"
+                  tick={{ fill: "hsl(var(--muted-foreground))" }}
+                />
+                <YAxis 
+                  className="text-muted-foreground"
+                  tick={{ fill: "hsl(var(--muted-foreground))" }}
+                />
+                <ChartTooltip content={<ChartTooltipContent />} />
+                <Line 
+                  type="monotone" 
+                  dataKey="filed" 
+                  stroke="hsl(var(--primary))" 
+                  strokeWidth={3}
+                  dot={{ fill: "hsl(var(--primary))", r: 5 }}
+                  activeDot={{ r: 7 }}
+                  animationDuration={1500}
+                  animationBegin={0}
+                />
+                <Line 
+                  type="monotone" 
+                  dataKey="granted" 
+                  stroke="hsl(var(--accent))" 
+                  strokeWidth={3}
+                  dot={{ fill: "hsl(var(--accent))", r: 5 }}
+                  activeDot={{ r: 7 }}
+                  animationDuration={1500}
+                  animationBegin={300}
+                />
+              </LineChart>
+            </ResponsiveContainer>
+          </ChartContainer>
+        </div>
+
         <div className="flex justify-center mb-8 patent_button">
           <a href="https://patents.justia.com/inventor/mahesh-kandula" target="_blank" rel="noopener noreferrer" aria-label="View all patents by Mahesh Kandula on Justia">
             View All Patents

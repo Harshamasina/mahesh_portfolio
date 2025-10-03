@@ -1,4 +1,5 @@
-import { Award, Dna, FlaskConical, Microscope, Target, CheckCircle2, TrendingUp } from "lucide-react";
+import { Award, Dna, FlaskConical, Microscope, Target, CheckCircle2, TrendingUp, ExternalLink } from "lucide-react";
+import { Button } from "./ui/button";
 
 const PatentsSection = () => {
   return (
@@ -11,6 +12,16 @@ const PatentsSection = () => {
         <p className="section-subtitle">
           Intellectual property contributions to biotechnology innovation
         </p>
+        
+        <div className="flex justify-center mb-8">
+          <a href="https://patents.justia.com/inventor/mahesh-kandula" target="_blank" rel="noopener noreferrer">
+            <Button variant="default" size="lg">
+              <ExternalLink className="icon-sm" />
+              View All Patents
+            </Button>
+          </a>
+        </div>
+
         <div className="patents-grid">
           <div className="glass-card patent-card stagger-item">
             <h3 className="patent-title">

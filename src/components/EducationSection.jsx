@@ -1,4 +1,4 @@
-import { GraduationCap, Dna, FlaskConical } from "lucide-react";
+import { GraduationCap, Scale, Briefcase, Target, Dna, FlaskConical } from "lucide-react";
 
 const EducationSection = () => {
   return (
@@ -14,7 +14,7 @@ const EducationSection = () => {
         <div className="education-grid">
           <div className="glass-card education-card stagger-item">
             <div className="icon-container mx-auto">
-              <GraduationCap className="icon-md text-primary" />
+              <Scale className="icon-md text-primary" />
             </div>
             <h3 className="education-degree">
               Bachelor of Laws (LLB)
@@ -25,7 +25,7 @@ const EducationSection = () => {
 
           <div className="glass-card education-card stagger-item">
             <div className="icon-container mx-auto">
-              <Dna className="icon-md text-primary" />
+              <Scale className="icon-md text-primary" />
             </div>
             <h3 className="education-degree">Master of Laws (LLM), Innovation, Technology and the Law</h3>
             <div className="education-institution">The University of Edinburgh</div>
@@ -34,7 +34,7 @@ const EducationSection = () => {
 
           <div className="glass-card education-card stagger-item">
             <div className="icon-container mx-auto">
-              <FlaskConical className="icon-md text-primary" />
+              <Briefcase className="icon-md text-primary" />
             </div>
             <h3 className="education-degree">Master of Business Adminsitration (M.B.A), Entreprenuership Studies</h3>
             <div className="education-institution">Babson College</div>
@@ -43,7 +43,7 @@ const EducationSection = () => {
 
           <div className="glass-card education-card stagger-item">
             <div className="icon-container mx-auto">
-              <Dna className="icon-md text-primary" />
+              <Target className="icon-md text-primary" />
             </div>
             <h3 className="education-degree">SCPM - Project Management</h3>
             <div className="education-institution">Stanford University</div>

@@ -35,36 +35,93 @@ const PatentsSection = () => {
             <TrendingUp className="icon-sm text-primary" />
             Patent Filing & Grant Trends
           </h3>
-          <div style={{ width: '100%', height: 400 }}>
+          <div className="chart-wrapper" style={{ width: '100%', height: 400 }}>
             <ResponsiveContainer width="100%" height="100%">
-              <LineChart data={chartData} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
-                <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.3} />
+              <LineChart 
+                data={chartData} 
+                margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+              >
+                <defs>
+                  <linearGradient id="colorFiled" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="5%" stopColor="hsl(var(--primary))" stopOpacity={0.3}/>
+                    <stop offset="95%" stopColor="hsl(var(--primary))" stopOpacity={0}/>
+                  </linearGradient>
+                  <linearGradient id="colorGranted" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="5%" stopColor="hsl(var(--accent))" stopOpacity={0.3}/>
+                    <stop offset="95%" stopColor="hsl(var(--accent))" stopOpacity={0}/>
+                  </linearGradient>
+                </defs>
+                <CartesianGrid 
+                  strokeDasharray="3 3" 
+                  stroke="hsl(var(--border))" 
+                  opacity={0.3}
+                  strokeWidth={1}
+                />
                 <XAxis 
                   dataKey="year" 
                   stroke="hsl(var(--muted-foreground))"
-                  tick={{ fill: "hsl(var(--muted-foreground))" }}
+                  tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 12 }}
+                  tickLine={{ stroke: "hsl(var(--border))" }}
+                  axisLine={{ stroke: "hsl(var(--border))" }}
                 />
                 <YAxis 
                   stroke="hsl(var(--muted-foreground))"
-                  tick={{ fill: "hsl(var(--muted-foreground))" }}
+                  tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 12 }}
+                  tickLine={{ stroke: "hsl(var(--border))" }}
+                  axisLine={{ stroke: "hsl(var(--border))" }}
                 />
                 <Tooltip 
                   contentStyle={{
                     backgroundColor: 'hsl(var(--card))',
                     border: '1px solid hsl(var(--border))',
-                    borderRadius: '8px',
-                    color: 'hsl(var(--foreground))'
+                    borderRadius: '12px',
+                    color: 'hsl(var(--foreground))',
+                    padding: '12px',
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+                    backdropFilter: 'blur(10px)'
                   }}
+                  labelStyle={{
+                    color: 'hsl(var(--primary))',
+                    fontWeight: 'bold',
+                    marginBottom: '8px'
+                  }}
+                  itemStyle={{
+                    color: 'hsl(var(--foreground))',
+                    padding: '4px 0'
+                  }}
+                  cursor={{ stroke: 'hsl(var(--primary))', strokeWidth: 1, strokeDasharray: '5 5' }}
                 />
-                <Legend />
+                <Legend 
+                  wrapperStyle={{
+                    paddingTop: '20px',
+                    fontSize: '14px',
+                    fontWeight: '500'
+                  }}
+                  iconType="line"
+                />
                 <Line 
                   type="monotone" 
                   dataKey="filed" 
                   name="Applications Filed"
                   stroke="hsl(var(--primary))" 
                   strokeWidth={3}
-                  dot={{ fill: "hsl(var(--primary))", r: 5 }}
-                  activeDot={{ r: 7 }}
+                  fill="url(#colorFiled)"
+                  dot={{ 
+                    fill: "hsl(var(--primary))", 
+                    strokeWidth: 2,
+                    r: 4,
+                    stroke: "hsl(var(--background))"
+                  }}
+                  activeDot={{ 
+                    r: 8,
+                    fill: "hsl(var(--primary))",
+                    stroke: "hsl(var(--background))",
+                    strokeWidth: 3,
+                    filter: 'drop-shadow(0 0 8px hsl(var(--primary)))'
+                  }}
+                  animationDuration={2000}
+                  animationEasing="ease-in-out"
+                  animationBegin={0}
                 />
                 <Line 
                   type="monotone" 
@@ -72,8 +129,23 @@ const PatentsSection = () => {
                   name="Patents Granted"
                   stroke="hsl(var(--accent))" 
                   strokeWidth={3}
-                  dot={{ fill: "hsl(var(--accent))", r: 5 }}
-                  activeDot={{ r: 7 }}
+                  fill="url(#colorGranted)"
+                  dot={{ 
+                    fill: "hsl(var(--accent))", 
+                    strokeWidth: 2,
+                    r: 4,
+                    stroke: "hsl(var(--background))"
+                  }}
+                  activeDot={{ 
+                    r: 8,
+                    fill: "hsl(var(--accent))",
+                    stroke: "hsl(var(--background))",
+                    strokeWidth: 3,
+                    filter: 'drop-shadow(0 0 8px hsl(var(--accent)))'
+                  }}
+                  animationDuration={2000}
+                  animationEasing="ease-in-out"
+                  animationBegin={300}
                 />
               </LineChart>
             </ResponsiveContainer>

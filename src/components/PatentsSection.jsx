@@ -46,7 +46,7 @@ const PatentsSection = () => {
             <TrendingUp className="icon-sm text-primary" />
             Patent Filing & Grant Trends
           </h3>
-          <ResponsiveContainer width="100%" aspect={2.5}>
+          <ChartContainer config={chartConfig} className="aspect-auto h-[400px] w-full">
             <LineChart data={chartData} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
               <CartesianGrid strokeDasharray="3 3" className="stroke-muted" opacity={0.3} />
               <XAxis 
@@ -80,7 +80,7 @@ const PatentsSection = () => {
                 animationBegin={300}
               />
             </LineChart>
-          </ResponsiveContainer>
+          </ChartContainer>
         </div>
 
         <div className="flex justify-center mb-8 patent_button">

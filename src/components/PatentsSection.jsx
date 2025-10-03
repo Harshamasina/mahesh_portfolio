@@ -197,7 +197,7 @@ const PatentsSection = () => {
                     fontWeight: 'bold',
                     marginBottom: '8px'
                   }}
-                  cursor={{ fill: 'hsl(var(--muted))', opacity: 0.3 }}
+                  cursor={false}
                 />
                 <Bar 
                   dataKey="patents" 

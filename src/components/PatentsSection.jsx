@@ -68,14 +68,14 @@ const PatentsSection = () => {
                 />
                 <XAxis 
                   dataKey="year" 
-                  stroke="hsl(var(--muted-foreground))"
-                  tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 12 }}
+                  stroke="hsl(var(--foreground))"
+                  tick={{ fill: "hsl(var(--foreground))", fontSize: 12 }}
                   tickLine={{ stroke: "hsl(var(--border))" }}
                   axisLine={{ stroke: "hsl(var(--border))" }}
                 />
                 <YAxis 
-                  stroke="hsl(var(--muted-foreground))"
-                  tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 12 }}
+                  stroke="hsl(var(--foreground))"
+                  tick={{ fill: "hsl(var(--foreground))", fontSize: 12 }}
                   tickLine={{ stroke: "hsl(var(--border))" }}
                   axisLine={{ stroke: "hsl(var(--border))" }}
                 />
@@ -168,8 +168,8 @@ const PatentsSection = () => {
                 />
                 <XAxis 
                   dataKey="country" 
-                  stroke="hsl(var(--muted-foreground))"
-                  tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 11 }}
+                  stroke="hsl(var(--foreground))"
+                  tick={{ fill: "hsl(var(--foreground))", fontSize: 11 }}
                   tickLine={{ stroke: "hsl(var(--border))" }}
                   axisLine={{ stroke: "hsl(var(--border))" }}
                   angle={-45}
@@ -177,11 +177,11 @@ const PatentsSection = () => {
                   height={80}
                 />
                 <YAxis 
-                  stroke="hsl(var(--muted-foreground))"
-                  tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 12 }}
+                  stroke="hsl(var(--foreground))"
+                  tick={{ fill: "hsl(var(--foreground))", fontSize: 12 }}
                   tickLine={{ stroke: "hsl(var(--border))" }}
                   axisLine={{ stroke: "hsl(var(--border))" }}
-                  label={{ value: 'Number of Patents', angle: -90, position: 'insideLeft', fill: 'hsl(var(--muted-foreground))' }}
+                  label={{ value: 'Number of Patents', angle: -90, position: 'insideLeft', fill: 'hsl(var(--foreground))' }}
                 />
                 <Tooltip 
                   contentStyle={{

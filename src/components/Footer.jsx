@@ -68,25 +68,7 @@ const Footer = () => {
                 <Linkedin className="icon-md" />
               </a>
               <a 
-                href="https://x.com/CelixBio" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="social-link"
-                aria-label="Twitter"
-              >
-                <Twitter className="icon-md" />
-              </a>
-              <a 
-                href="https://researchgate.net/profile/yourprofile" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="social-link"
-                aria-label="ResearchGate"
-              >
-                <BookOpen className="icon-md" />
-              </a>
-              <a 
-                href="mailto:your.email@example.com"
+                href="mailto:intellect@maheshkandula.com"
                 className="social-link"
                 aria-label="Email"
               >

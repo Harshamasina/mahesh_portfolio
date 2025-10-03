@@ -87,7 +87,7 @@ const ExperienceSection = () => {
               </div>
               <h3 className="experience-title">
                 <Microscope className="icon-sm" />
-                Senior Research Scientist
+                Associate Director
               </h3>
               <div className="experience-company">
                 <Building2 className="inline-block icon-sm mr-1" />

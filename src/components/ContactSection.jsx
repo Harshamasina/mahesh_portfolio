@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { Mail, User, Send, FlaskConical, Sparkles } from "lucide-react";
+import { Mail, User, Send, FlaskConical, Sparkles, Phone } from "lucide-react";
 import emailjs from "@emailjs/browser";
+import { toast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
   const rotatingTexts = [
@@ -45,11 +46,18 @@ const ContactSection = () => {
       );
 
       console.log("Email sent:", result.text);
-      alert("✅ Thank you for your message. I will get back to you soon!");
+      toast({
+        title: "Message sent successfully!",
+        description: "Thank you for your message. I will get back to you soon.",
+      });
       setFormData({ name: "", email: "", number: "", message: "" });
     } catch (error) {
       console.error("Error sending email:", error);
-      alert("❌ Failed to send message. Please try again later.");
+      toast({
+        title: "Failed to send message",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
     }
   };
 
@@ -117,7 +125,7 @@ const ContactSection = () => {
 
             <div className="form-group">
               <label htmlFor="number" className="form-label">
-                <Mail className="icon-sm" />
+                <Phone className="icon-sm" />
                 Phone Number
               </label>
               <input

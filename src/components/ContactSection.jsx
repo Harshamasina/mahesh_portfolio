@@ -1,12 +1,30 @@
-import { useState } from "react";
-import { Mail, User, Send } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Mail, User, Send, FlaskConical, Sparkles } from "lucide-react";
 
 const ContactSection = () => {
+  const rotatingTexts = [
+    "Innovator",
+    "Entrepreneur",
+    "Corporate Law",
+    "Intellectual Property Law",
+    "Civil and Criminal Law",
+    "Litigations"
+  ];
+
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTextIndex((prevIndex) => (prevIndex + 1) % rotatingTexts.length);
+    }, 3000); // Change text every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -29,6 +47,15 @@ const ContactSection = () => {
           <Mail className="icon-lg" aria-hidden="true" />
           Get in Touch
         </h2>
+        <div className="hero-subtitle" style={{ justifyContent: 'center', marginBottom: '1.5rem' }}>
+          <FlaskConical className="icon-md" aria-hidden="true" />
+          <div className="rotating-text-container">
+            <span key={currentTextIndex} className="rotating-text">
+              {rotatingTexts[currentTextIndex]}
+            </span>
+          </div>
+          <Sparkles className="icon-md" aria-hidden="true" />
+        </div>
         <p className="section-subtitle">
           Interested in collaboration, consultation, or discussing biotechnology innovations? Connect with Mahesh Kandula for opportunities in drug discovery, pharmaceutical partnerships, and life sciences ventures.
         </p>

@@ -2,24 +2,6 @@ import { Dna, FlaskConical, Mail, Sparkles, Microscope, Beaker } from "lucide-re
 import { useState, useEffect } from "react";
 
 const HeroSection = () => {
-  const rotatingTexts = [
-    "Innovator",
-    "Entrepreneur",
-    "Corporate Law",
-    "Intellectual Property Law",
-    "Civil and Criminal Law",
-    "Litigations"
-  ];
-
-  const [currentTextIndex, setCurrentTextIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTextIndex((prevIndex) => (prevIndex + 1) % rotatingTexts.length);
-    }, 3000); // Change text every 3 seconds
-
-    return () => clearInterval(interval);
-  }, []);
   return (
     <section id="about" className="section hero-section" aria-label="About Mahesh Kandula">
       {/* Animated Biotech Vector Graphics */}
@@ -82,15 +64,6 @@ const HeroSection = () => {
               <Dna className="hero-title-icon" aria-hidden="true" />
               Mahesh Kandula
             </h1>
-            <div className="hero-subtitle">
-              <FlaskConical className="icon-md" aria-hidden="true" />
-              <div className="rotating-text-container">
-                <span key={currentTextIndex} className="rotating-text">
-                  {rotatingTexts[currentTextIndex]}
-                </span>
-              </div>
-              <Sparkles className="icon-md" aria-hidden="true" />
-            </div>
             <p className="hero-description">
               I'm an entrepreneur and scientist with a proven record of creating transformative life sciences ventures. As the sole inventor of 100+ novel drug molecules across major therapeutic areas, I've advanced innovations from discovery to clinical trials. With multiple patents and global pharma collaborations, I bring expertise in IP, strategy, and team leadership to drive bold ideas into real-world therapies.
             </p>

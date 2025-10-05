@@ -762,6 +762,21 @@ html {
   gap: 0.5rem;
 }
 
+.education-logo {
+  width: 100%;
+  max-width: 120px;
+  height: 80px;
+  object-fit: contain;
+  margin: 1rem auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.education-logo:hover {
+  transform: scale(1.05);
+}
+
 .education-institution {
   font-size: 1rem;
   color: var(--primary);
@@ -773,6 +788,13 @@ html {
   font-size: 0.875rem;
   color: var(--accent);
   font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .education-logo {
+    max-width: 100px;
+    height: 70px;
+  }
 }
 
 /* Publications List */

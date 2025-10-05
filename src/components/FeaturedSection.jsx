@@ -19,6 +19,7 @@ const FeaturedSection = () => {
             <h3 className="featured-title">
               CII IPR AWARDS
             </h3>
+            <img src="/CII.png" alt="CII IPR Awards Logo" className="education-logo" />
             <p className="featured-description">
               Cellix Bio Private Limited won the award in the Category of Best Patent Portfolio, Startup-Life Sc/Pharma, Sep 2020
             </p>
@@ -32,6 +33,7 @@ const FeaturedSection = () => {
             <h3 className="featured-title">
               Clarivate Announces Winners of the South Asia Innovation Awards 2024
             </h3>
+            <img src="/claritev.png" alt="Clarivate Awards Logo" className="education-logo" />
             <p className="featured-description">
               India Emerging Player Winners - Cellix Bio Private Limited, Issued by Clarivate Plc (NYSE: CLVT)
             </p>
@@ -45,6 +47,7 @@ const FeaturedSection = () => {
             <h3 className="featured-title">
               Best Patents Portfolio in the startup, life science/pharma sector
             </h3>
+            <img src="/CII.png" alt="CII Awards Logo" className="education-logo" />
             <p className="featured-description">
               Presented by the Confederation of Indian Industry (CII)
             </p>

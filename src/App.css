@@ -233,6 +233,18 @@ html {
     display: block;
   }
 
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+
+  .navbar-logo {
+    height: 30px;
+  }
+
+  .navbar-link {
+    font-size: 1rem;
+  }
+
   .navbar-menu {
     position: fixed;
     top: 70px;

@@ -1425,6 +1425,10 @@ html {
     justify-content: center;
   }
 
+  .hero-section {
+    padding-top: 10rem;
+  }
+
   .rotating-text-container {
     min-height: 1.75rem;
   }

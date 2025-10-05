@@ -1471,7 +1471,7 @@ html {
 
 @media (max-width: 480px) {
   .hero-section {
-    padding-top: 11rem;
+    padding-top: 6rem;
   }
 
   .hero-title {
@@ -1504,7 +1504,7 @@ html {
   }
 
   .navbar-logo {
-    height: 60px;
+    height: 40px;
   }
   
   .navbar-link {

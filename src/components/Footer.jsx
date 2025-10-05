@@ -20,6 +20,12 @@ const Footer = () => {
             <p className="footer-tagline">
               Advancing biotechnology through innovation, research, and leadership
             </p>
+            <ol>
+              <li className="footer-tagline">20+ Years of Experience</li>
+              <li className="footer-tagline">700+ International Patents</li>
+              <li className="footer-tagline">Sole Inventor</li>
+              <li className="footer-tagline">Multple Threapeutic Areas</li>
+            </ol>
           </div>
 
           <div className="footer-section">

@@ -56,36 +56,67 @@ const HeroSection = () => {
       </div>
 
       <div className="section-container">
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center max-w-6xl mx-auto">
           {/* Left side - Content */}
-          <article className="animate-fade-in space-y-6">
-            <h1 className="hero-title">
-              <Dna className="inline-block icon-lg animate-pulse-glow" aria-hidden="true" />
-              Mahesh Kandula
-            </h1>
-            <p className="hero-subtitle">
-              <FlaskConical className="icon-md" aria-hidden="true" />
-              Inventor and Entrepreneur
-              <Sparkles className="icon-md" aria-hidden="true" />
+          <article className="animate-fade-in space-y-6 order-2 md:order-1">
+            <div className="space-y-2">
+              <p className="text-lg text-muted-foreground font-medium">Hello</p>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+                I'm Mahesh Kandula
+              </h1>
+              <p className="text-xl md:text-2xl text-primary font-semibold flex items-center gap-2">
+                <FlaskConical className="w-6 h-6" aria-hidden="true" />
+                Inventor and Entrepreneur
+              </p>
+            </div>
+            
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+              I'm an entrepreneur and scientist with a proven record of creating transformative life sciences ventures. As the sole inventor of 100+ novel drug molecules across major therapeutic areas, I've advanced innovations from discovery to clinical trials.
             </p>
-            <p className="hero-description">
-              I'm an entrepreneur and scientist with a proven record of creating transformative life sciences ventures. As the sole inventor of 100+ novel drug molecules across major therapeutic areas, I've advanced innovations from discovery to clinical trials. With multiple patents and global pharma collaborations, I bring expertise in IP, strategy, and team leadership to drive bold ideas into real-world therapies.
-            </p>
-            <a href="#contact" className="hero-cta" aria-label="Contact Mahesh Kandula">
-              <Mail className="icon-sm" aria-hidden="true" />
-              Get in Touch
+            
+            <a 
+              href="#contact" 
+              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full font-medium hover:opacity-90 transition-all duration-200 shadow-lg hover:shadow-xl group" 
+              aria-label="Contact Mahesh Kandula"
+            >
+              Discover More
+              <Mail className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
             </a>
           </article>
 
-          {/* Right side - Profile Image */}
-          <div className="flex justify-center md:justify-end animate-scale-in">
-            <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-full opacity-75 group-hover:opacity-100 blur transition duration-500 group-hover:duration-200 animate-pulse"></div>
-              <img 
-                src="/mahesh_pic.png" 
-                alt="Mahesh Kandula - Biotech Entrepreneur and Scientist" 
-                className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-background shadow-2xl transition-transform duration-500 group-hover:scale-105"
-              />
+          {/* Right side - Profile Image with Decorative Elements */}
+          <div className="flex justify-center md:justify-end order-1 md:order-2 animate-scale-in">
+            <div className="relative w-full max-w-md aspect-square">
+              {/* Main circular background gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-accent/10 to-primary/5 rounded-full blur-3xl"></div>
+              
+              {/* Decorative floating badges */}
+              <div className="absolute top-8 right-4 bg-card border-2 border-border rounded-lg px-4 py-2 shadow-lg animate-fade-in z-10">
+                <p className="text-xs text-muted-foreground">Patents</p>
+                <p className="text-lg font-bold text-foreground">20+</p>
+              </div>
+              
+              <div className="absolute top-1/3 left-0 bg-card border-2 border-border rounded-lg px-4 py-2 shadow-lg animate-fade-in z-10" style={{ animationDelay: '0.2s' }}>
+                <p className="text-xs text-muted-foreground">Drug Molecules</p>
+                <p className="text-lg font-bold text-foreground">100+</p>
+              </div>
+              
+              <div className="absolute bottom-12 right-8 bg-card border-2 border-border rounded-lg px-4 py-2 shadow-lg animate-fade-in z-10" style={{ animationDelay: '0.4s' }}>
+                <p className="text-xs text-muted-foreground">Experience</p>
+                <p className="text-lg font-bold text-foreground">25+ Years</p>
+              </div>
+              
+              {/* Profile Image Container */}
+              <div className="relative w-full h-full flex items-center justify-center">
+                <div className="relative group">
+                  <div className="absolute -inset-2 bg-gradient-to-r from-primary to-accent rounded-full opacity-75 group-hover:opacity-100 blur-xl transition duration-500 animate-pulse"></div>
+                  <img 
+                    src="/mahesh_pic.png" 
+                    alt="Mahesh Kandula - Biotech Entrepreneur and Scientist" 
+                    className="relative w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full object-cover border-8 border-background shadow-2xl transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Mail, User, Send, FlaskConical, Sparkles } from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 const ContactSection = () => {
   const rotatingTexts = [
@@ -8,7 +9,7 @@ const ContactSection = () => {
     "Corporate Law",
     "Intellectual Property Law",
     "Civil and Criminal Law",
-    "Litigations"
+    "Litigations",
   ];
 
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -22,16 +23,34 @@ const ContactSection = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTextIndex((prevIndex) => (prevIndex + 1) % rotatingTexts.length);
-    }, 3000); // Change text every 3 seconds
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Thank you for your message. I will get back to you soon!");
-    setFormData({ name: "", email: "", message: "" });
+
+    try {
+      const result = await emailjs.send(
+        "service_wzhnz8z", // ✅ Your Service ID
+        "template_93e7p14", // ✅ Your Template ID
+        {
+          name: formData.name,
+          email: formData.email,
+          number: formData.number,
+          message: formData.message,
+        },
+        "6XzhfCt4XXJmTepAL" // ✅ Your Public Key
+      );
+
+      console.log("Email sent:", result.text);
+      alert("✅ Thank you for your message. I will get back to you soon!");
+      setFormData({ name: "", email: "", number: "", message: "" });
+    } catch (error) {
+      console.error("Error sending email:", error);
+      alert("❌ Failed to send message. Please try again later.");
+    }
   };
 
   const handleChange = (e) => {
@@ -48,7 +67,10 @@ const ContactSection = () => {
           <Mail className="icon-lg" aria-hidden="true" />
           Get in Touch
         </h2>
-        <div className="hero-subtitle" style={{ justifyContent: 'center', marginBottom: '1.5rem' }}>
+        <div
+          className="hero-subtitle"
+          style={{ justifyContent: "center", marginBottom: "1.5rem" }}
+        >
           <FlaskConical className="icon-md" aria-hidden="true" />
           <div className="rotating-text-container">
             <span key={currentTextIndex} className="rotating-text">
@@ -90,6 +112,23 @@ const ContactSection = () => {
                 required
                 className="form-input"
                 placeholder="your.email@example.com"
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="number" className="form-label">
+                <Mail className="icon-sm" />
+                Phone Number
+              </label>
+              <input
+                type="tel"
+                id="number"
+                name="number"
+                value={formData.number}
+                onChange={handleChange}
+                required
+                className="form-input"
+                placeholder="Your phone number"
               />
             </div>
 

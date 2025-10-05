@@ -67,16 +67,13 @@ const ExperienceSection = () => {
               </h3>
               <div className="experience-company">
                 <Building2 className="inline-block icon-sm mr-1" />
-                Krisani Biosciences
+                Biosciences
               </div>
               <p className="experience-description">
-                Served as CEO & CSO for Krisani Biosciences, a drug design and development company. Within 3 years from the date of inception of KrisaniBio, a strategic collaboration with a global drug development company, Aizant was accomplished to advance the lead candidates in to clinical phase and commercialization. 
+                Inventor of new molecular entities for the treatment of Wilson's disease, Hypertriglyceridemia, Cystinosis, Fatty Liver, Cancer, Neuropathic Pain and Huntington's Disease.  
               </p>
               <p className="experience-description">
-                Inventor of 7 potential new molecular entities for the treatment of Wilson's disease, Hypertriglyceridemia, Cystinosis, Fatty Liver, Cancer, Neuropathic Pain and Huntington's Disease. 
-              </p>
-              <p className="experience-description">
-                Inventor of molecular diagnostic assays for the early and late stage detection of multiple types of cancer from a blood sample. A collaboration alliance had been established with a globally renowned cancer hospital, Indo-American Oncology Hospital and NIMS in Hyderabad, India for the further clinical validation and submission to US-FDA, 510 (k) clearance.
+                Inventor of molecular diagnostic assays for the early and late stage detection of multiple types of cancer from a blood sample. A collaboration alliance had been established with a globally renowned cancer hospital, Indo-American Oncology Hospital and NIMS in Hyderabad, India for the further clinical validation and submission to US-FDA, 510 (k) clearance. 
               </p>
             </div>
 
@@ -94,10 +91,7 @@ const ExperienceSection = () => {
                 Indigene Pharmaceuticals
               </div>
               <p className="experience-description">
-                Served as an Associate Director of Global Research & Development and was responsible for global drug design and development as well as intellectual property portfolio management while I was working for Indigene Pharma located in Westborough, MA, USA.
-              </p>
-              <p className="experience-description">
-                 Co-inventor of aminoguanidine derivatives for the treatment of diabetic complications and Other chronic diseases and a Bio-technology based process technology for the production of Lipoic acid using G. Oxydans 621H.
+                Served as an Associate Director of Global Research & Development and was responsible for global drug design and development as well as intellectual property portfolio management while I was working for Indigene Pharma located in Westborough, USA. Co-inventor of aminoguanidine derivatives for the treatment of diabetic complications and Other chronic diseases and a Bio-technology based process technology for the production of Lipoic acid using G. Oxydans 621H.
               </p>
             </div>
           </div>

@@ -56,11 +56,11 @@ const HeroSection = () => {
       </div>
 
       <div className="section-container">
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-          {/* Left side - Article Content */}
-          <article className="animate-fade-in space-y-6">
+        <div className="hero-grid">
+          {/* Left side - Content */}
+          <article className="hero-article">
             <h1 className="hero-title">
-              <Dna className="inline-block icon-lg animate-pulse-glow" aria-hidden="true" />
+              <Dna className="hero-title-icon" aria-hidden="true" />
               Mahesh Kandula
             </h1>
             <p className="hero-subtitle">
@@ -78,25 +78,25 @@ const HeroSection = () => {
           </article>
 
           {/* Right side - Profile Image */}
-          <div className="flex justify-center md:justify-end">
-            <div className="relative group animate-scale-in">
+          <div className="hero-image-wrapper">
+            <div className="hero-image-container">
               {/* Outer glow ring - pulsing */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary via-accent to-primary rounded-full opacity-50 blur-2xl animate-pulse"></div>
+              <div className="hero-glow-outer"></div>
               
               {/* Middle glow ring - rotating gradient */}
-              <div className="absolute -inset-2 bg-gradient-to-r from-primary to-accent rounded-full opacity-75 group-hover:opacity-100 blur-xl transition-all duration-700 group-hover:blur-2xl"></div>
+              <div className="hero-glow-middle"></div>
               
               {/* Image container with border */}
-              <div className="relative">
+              <div className="hero-image-inner">
                 <img 
                   src="/mahesh_pic.png" 
                   alt="Mahesh Kandula - Biotech Entrepreneur and Scientist" 
-                  className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-background shadow-2xl transition-all duration-700 group-hover:scale-105 group-hover:shadow-[0_0_40px_rgba(59,130,246,0.5)] animate-fade-in"
+                  className="hero-profile-image"
                 />
                 
                 {/* Decorative DNA icon */}
-                <div className="absolute bottom-4 right-4 bg-primary text-primary-foreground p-3 rounded-full shadow-lg animate-fade-in opacity-90 group-hover:opacity-100 transition-opacity">
-                  <Dna className="w-6 h-6 animate-pulse" />
+                <div className="hero-dna-badge">
+                  <Dna className="hero-dna-icon" />
                 </div>
               </div>
             </div>

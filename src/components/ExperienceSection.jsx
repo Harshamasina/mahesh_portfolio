@@ -23,8 +23,7 @@ const ExperienceSection = () => {
                 Board Member
               </h3>
               <div className="experience-company">
-                <Building2 className="inline-block icon-sm mr-1" />
-                Cellix Bio
+                <img src="/cellix_logo.png" alt="Cellix Bio" className="experience-logo" />
               </div>
               <p className="experience-description">
                 Cellix Bio is an innovative drug design and development bio-pharmaceutical company focused to develop best-in-class therapies for the treatment of Neurological, Inflammatory and Metabolic Diseases.
@@ -44,8 +43,7 @@ const ExperienceSection = () => {
                 Managing Director & CEO
               </h3>
               <div className="experience-company">
-                <Building2 className="inline-block icon-sm mr-1" />
-                Cellix Bio
+                <img src="/cellix_logo.png" alt="Cellix Bio" className="experience-logo" />
               </div>
               <p className="experience-description">
                 Leading a team of scientists and researchers in developing

@@ -718,7 +718,28 @@ html {
   font-size: 1rem;
   color: var(--primary);
   margin-bottom: 0.75rem;
-  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.experience-logo {
+  height: 60px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.experience-logo:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .experience-logo {
+    height: 50px;
+    max-width: 160px;
+  }
 }
 
 .experience-description {

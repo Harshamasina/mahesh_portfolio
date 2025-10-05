@@ -9,7 +9,7 @@ const EducationSection = () => {
           Education
         </h2>
         <p className="section-subtitle">
-          Academic foundations spanning Biotechnology, Law (LLB, LLM), and Business Administration (MBA). Interdisciplinary education from world-renowned institutions including IIT Kharagpur, Babson College, University of Edinburgh, and Stanford University.
+          Academic foundations spanning Biotechnology, Law (LLB, LLM), and Business Administration (MBA). Interdisciplinary education from world-renowned institutions including IIT Kharagpur, Babson College, University of Edinburgh, and Stanford University
         </p>
         <div className="education-grid">
           <div className="glass-card education-card stagger-item">

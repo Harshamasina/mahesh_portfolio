@@ -9,7 +9,7 @@ const FeaturedSection = () => {
           Featured Achievements
         </h2>
         <p className="section-subtitle">
-          Award-winning recognition from leading industry organizations. Cellix Bio received prestigious awards including CII IPR Awards for Best Patent Portfolio and Clarivate South Asia Innovation Awards for emerging innovation leadership.
+          Award-winning recognition from leading industry organizations. Cellix Bio received prestigious awards including CII IPR Awards for Best Patent Portfolio and Clarivate South Asia Innovation Awards for emerging innovation leadership
         </p>
         <div className="featured-grid">
           <div className="glass-card featured-card stagger-item">

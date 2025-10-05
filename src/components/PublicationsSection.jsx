@@ -10,7 +10,7 @@ const PublicationsSection = () => {
           Key Publications
         </h2>
         <p className="section-subtitle">
-          Peer-reviewed research contributions in drug discovery, cancer research, and biotechnology. Published in leading scientific journals including European Society of Medicine, American Society of Clinical Oncology, and Asian Pacific Journal of Cancer Prevention.
+          Peer-reviewed research contributions in drug discovery, cancer research, and biotechnology. Published in leading scientific journals including European Society of Medicine, American Society of Clinical Oncology, and Asian Pacific Journal of Cancer Prevention
         </p>
         <div className="publications-list">
           <div className="glass-card publication-item stagger-item">

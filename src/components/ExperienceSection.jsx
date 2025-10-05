@@ -9,7 +9,7 @@ const ExperienceSection = () => {
           Professional Experience
         </h2>
         <p className="section-subtitle">
-          Leadership roles driving biotechnology innovation and pharmaceutical development. Over 15 years of experience in drug discovery, patent portfolio management, and building successful life sciences ventures.
+          Leadership roles driving biotechnology innovation and pharmaceutical development. Over 15 years of experience in drug discovery, patent portfolio management, and building successful life sciences ventures
         </p>
         <div className="glass-card stagger-item">
           <div className="experience-timeline">

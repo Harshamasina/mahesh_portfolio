@@ -66,7 +66,7 @@ const PatentsSection = () => {
           Patents
         </h2>
         <p className="section-subtitle">
-          Extensive intellectual property portfolio covering novel drug molecules and therapeutic approaches. Multiple granted patents in cancer treatment, pain management, diabetes, neurodegenerative diseases, and metabolic disorders.
+          Extensive intellectual property portfolio covering novel drug molecules and therapeutic approaches. Multiple granted patents in cancer treatment, pain management, diabetes, neurodegenerative diseases, and metabolic disorders
         </p>
         
         <div className="glass-card p-6 mb-12 animate-fade-in">

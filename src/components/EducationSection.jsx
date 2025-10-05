@@ -19,7 +19,7 @@ const EducationSection = () => {
             <h3 className="education-degree">
               Bachelor of Laws (LLB)
             </h3>
-            <img src="/osmania.jpg" alt="Osmania University Logo" className="education-logo" />
+            <img src="/osmania.png" alt="Osmania University Logo" className="education-logo" />
             <div className="education-institution">Osmania University, Hyderabad</div>
             <div className="education-year">2022 - 2025</div>
           </div>
@@ -59,7 +59,7 @@ const EducationSection = () => {
               <FlaskConical className="icon-md text-primary" />
             </div>
             <h3 className="education-degree">Master's Degree, Biotechnology and Biochemical Engineering</h3>
-            <img src="/IIT.jpg" alt="IIT Kharagpur Logo" className="education-logo" />
+            <img src="/IIT.png" alt="IIT Kharagpur Logo" className="education-logo" />
             <div className="education-institution">Indian Institute of Technology, Kharagpur</div>
             <div className="education-year">2005</div>
           </div>

@@ -1426,7 +1426,7 @@ html {
   }
 
   .hero-section {
-    padding-top: 10rem;
+    padding-top: 12rem;
   }
 
   .rotating-text-container {
@@ -1470,6 +1470,10 @@ html {
 }
 
 @media (max-width: 480px) {
+  .hero-section {
+    padding-top: 11rem;
+  }
+
   .hero-title {
     font-size: 2rem;
     flex-direction: column;

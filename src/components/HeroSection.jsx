@@ -64,6 +64,32 @@ const HeroSection = () => {
               <Dna className="hero-title-icon" aria-hidden="true" />
               Mahesh Kandula
             </h1>
+            
+            {/* Profile Image - mobile only */}
+            <div className="hero-image-wrapper hero-image-mobile">
+              <div className="hero-image-container">
+                {/* Outer glow ring - pulsing */}
+                <div className="hero-glow-outer"></div>
+                
+                {/* Middle glow ring - rotating gradient */}
+                <div className="hero-glow-middle"></div>
+                
+                {/* Image container with border */}
+                <div className="hero-image-inner">
+                  <img 
+                    src="/mahesh_pic.png" 
+                    alt="Mahesh Kandula - Biotech Entrepreneur and Scientist" 
+                    className="hero-profile-image"
+                  />
+                  
+                  {/* Decorative DNA icon */}
+                  <div className="hero-dna-badge">
+                    <Dna className="hero-dna-icon" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            
             <p className="hero-description">
               I'm an entrepreneur and scientist with a proven record of creating transformative life sciences ventures. As the sole inventor of 100+ novel drug molecules across major therapeutic areas, I've advanced innovations from discovery to clinical trials. With multiple patents and global pharma collaborations, I bring expertise in IP, strategy, and team leadership to drive bold ideas into real-world therapies
             </p>
@@ -73,8 +99,8 @@ const HeroSection = () => {
             </a>
           </article>
 
-          {/* Right side - Profile Image */}
-          <div className="hero-image-wrapper">
+          {/* Right side - Profile Image - desktop only */}
+          <div className="hero-image-wrapper hero-image-desktop">
             <div className="hero-image-container">
               {/* Outer glow ring - pulsing */}
               <div className="hero-glow-outer"></div>

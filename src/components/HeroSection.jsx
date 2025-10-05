@@ -57,7 +57,7 @@ const HeroSection = () => {
 
       <div className="section-container">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-          {/* Left side - Content */}
+          {/* Left side - Article Content */}
           <article className="animate-fade-in space-y-6">
             <h1 className="hero-title">
               <Dna className="inline-block icon-lg animate-pulse-glow" aria-hidden="true" />

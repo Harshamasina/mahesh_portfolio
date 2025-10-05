@@ -16,7 +16,6 @@ const Footer = () => {
           <div className="footer-section">
             <div className="footer-brand">
               <img src="/logo_transparent.png" alt="Mahesh Kandula Logo" className="footer-logo" />
-              <h3>Mahesh Kandula</h3>
             </div>
             <p className="footer-tagline">
               Advancing biotechnology through innovation, research, and leadership

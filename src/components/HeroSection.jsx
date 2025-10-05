@@ -56,24 +56,39 @@ const HeroSection = () => {
       </div>
 
       <div className="section-container">
-        <article className="fade-in-up">
-          <h1 className="hero-title">
-            <Dna className="inline-block icon-lg animate-pulse-glow" aria-hidden="true" />
-            Mahesh Kandula
-          </h1>
-          <p className="hero-subtitle">
-            <FlaskConical className="icon-md" aria-hidden="true" />
-            Inventor and Entrepreneur
-            <Sparkles className="icon-md" aria-hidden="true" />
-          </p>
-          <p className="hero-description">
-            I'm an entrepreneur and scientist with a proven record of creating transformative life sciences ventures. As the sole inventor of 100+ novel drug molecules across major therapeutic areas, I've advanced innovations from discovery to clinical trials. With multiple patents and global pharma collaborations, I bring expertise in IP, strategy, and team leadership to drive bold ideas into real-world therapies.
-          </p>
-          <a href="#contact" className="hero-cta" aria-label="Contact Mahesh Kandula">
-            <Mail className="icon-sm" aria-hidden="true" />
-            Get in Touch
-          </a>
-        </article>
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          {/* Left side - Content */}
+          <article className="animate-fade-in space-y-6">
+            <h1 className="hero-title">
+              <Dna className="inline-block icon-lg animate-pulse-glow" aria-hidden="true" />
+              Mahesh Kandula
+            </h1>
+            <p className="hero-subtitle">
+              <FlaskConical className="icon-md" aria-hidden="true" />
+              Inventor and Entrepreneur
+              <Sparkles className="icon-md" aria-hidden="true" />
+            </p>
+            <p className="hero-description">
+              I'm an entrepreneur and scientist with a proven record of creating transformative life sciences ventures. As the sole inventor of 100+ novel drug molecules across major therapeutic areas, I've advanced innovations from discovery to clinical trials. With multiple patents and global pharma collaborations, I bring expertise in IP, strategy, and team leadership to drive bold ideas into real-world therapies.
+            </p>
+            <a href="#contact" className="hero-cta" aria-label="Contact Mahesh Kandula">
+              <Mail className="icon-sm" aria-hidden="true" />
+              Get in Touch
+            </a>
+          </article>
+
+          {/* Right side - Profile Image */}
+          <div className="flex justify-center md:justify-end animate-scale-in">
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-full opacity-75 group-hover:opacity-100 blur transition duration-500 group-hover:duration-200 animate-pulse"></div>
+              <img 
+                src="/mahesh_pic.png" 
+                alt="Mahesh Kandula - Biotech Entrepreneur and Scientist" 
+                className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-background shadow-2xl transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

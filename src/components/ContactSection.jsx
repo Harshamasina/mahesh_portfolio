@@ -15,6 +15,7 @@ const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    number: "",
     message: "",
   });
 
@@ -56,9 +57,6 @@ const ContactSection = () => {
           </div>
           <Sparkles className="icon-md" aria-hidden="true" />
         </div>
-        <p className="section-subtitle">
-          Interested in collaboration, consultation, or discussing biotechnology innovations? Connect with Mahesh Kandula for opportunities in drug discovery, pharmaceutical partnerships, and life sciences ventures
-        </p>
         <div className="glass-card contact-card stagger-item">
           <form onSubmit={handleSubmit} className="contact-form">
             <div className="form-group">

@@ -33,11 +33,11 @@ const FeaturedSection = () => {
             <h3 className="featured-title">
               Clarivate Announces Winners of the South Asia Innovation Awards 2024
             </h3>
-            <img src="/claritev.png" alt="Clarivate Awards Logo" className="education-logo" />
+            <img src="/clarivate.png" alt="Clarivate Awards Logo" className="education-logo" />
             <p className="featured-description">
               India Emerging Player Winners - Cellix Bio Private Limited, Issued by Clarivate Plc (NYSE: CLVT)
             </p>
-            <a href="https://www.linkedin.com/in/mahesh-kandula1/details/honors/1758471599123/single-media-viewer?type=LINK&profileId=ACoAAAsT13UBliMhAtH66sXHvJu44kjWdXkW9O4&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_honors_details%3BDzMamOHoRm6A7bRClm435Q%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="View Clarivate South Asia Innovation Awards 2024 details">Click to view more</a>
+            <a href="https://clarivate.com/news/clarivate-announces-winners-of-the-south-asia-innovation-awards-2024/" target="_blank" rel="noopener noreferrer" aria-label="View Clarivate South Asia Innovation Awards 2024 details">Click to view more</a>
           </div>
 
           <div className="glass-card featured-card stagger-item">

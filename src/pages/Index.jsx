@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
 import Navigation from "../components/Navigation";
 import HeroSection from "../components/HeroSection";
 import ExperienceSection from "../components/ExperienceSection";
@@ -8,12 +9,17 @@ import PatentsSection from "../components/PatentsSection";
 import FeaturedSection from "../components/FeaturedSection";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
-import DarkModeToggle from "../components/DarkModeToggle";
 import ScrollToTop from "../components/ScrollToTop";
 import DNABackground from "../components/DNABackground";
 import "../App.css";
 
 const Index = () => {
+  // Force light theme on mount
+  useEffect(() => {
+    document.documentElement.classList.remove("dark");
+    localStorage.setItem("theme", "light");
+  }, []);
+
   return (
     <div>
       <Helmet>
@@ -56,9 +62,6 @@ const Index = () => {
       </Helmet>
       {/* DNA Vector Background */}
       <DNABackground />
-
-      {/* Dark Mode Toggle */}
-      <DarkModeToggle />
 
       {/* Scroll to Top Button */}
       <ScrollToTop />

@@ -168,7 +168,7 @@ html {
 }
 
 .navbar-logo {
-  height: 80px;
+  height: 50px;
   width: auto;
   object-fit: contain;
   transition: transform 0.3s ease;

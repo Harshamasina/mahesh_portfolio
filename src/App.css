@@ -167,6 +167,17 @@ html {
   gap: 0.5rem;
 }
 
+.navbar-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05);
+}
+
 .navbar-menu {
   display: flex;
   gap: 2rem;
@@ -1098,6 +1109,12 @@ html {
   margin: 0;
 }
 
+.footer-logo {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
 .footer-tagline {
   color: var(--muted-foreground);
   line-height: 1.6;
@@ -1348,6 +1365,14 @@ html {
 
   .navbar-brand {
     font-size: 1.25rem;
+  }
+
+  .navbar-logo {
+    height: 32px;
+  }
+
+  .footer-logo {
+    height: 40px;
   }
 }
 

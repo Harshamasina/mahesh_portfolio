@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Microscope } from "lucide-react";
 
 const Navigation = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -8,7 +7,7 @@ const Navigation = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <a href="#about" className="navbar-brand">
-          <Microscope className="icon-md" />
+          <img src="/logo_transparent.png" alt="Mahesh Kandula Logo" className="navbar-logo" />
           Mahesh Kandula
         </a>
         <button

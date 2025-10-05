@@ -3,7 +3,6 @@ import {
   Twitter, 
   Mail, 
   Github,
-  Microscope,
   GraduationCap,
   BookOpen,
   Users
@@ -16,7 +15,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-section">
             <div className="footer-brand">
-              <Microscope className="icon-lg" />
+              <img src="/logo_transparent.png" alt="Mahesh Kandula Logo" className="footer-logo" />
               <h3>Mahesh Kandula</h3>
             </div>
             <p className="footer-tagline">

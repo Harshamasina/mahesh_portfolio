@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Mail, User, Send, FlaskConical, Sparkles, Phone } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import { toast } from "@/hooks/use-toast";

@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Mail, User, Send, FlaskConical, Sparkles, Phone } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import { toast } from "@/hooks/use-toast";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const ContactSection = () => {
   const rotatingTexts = [
@@ -20,6 +21,8 @@ const ContactSection = () => {
     number: "",
     message: "",
   });
+  const [captchaValue, setCaptchaValue] = useState(null);
+  const recaptchaRef = useRef(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -29,8 +32,34 @@ const ContactSection = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const handleCaptchaChange = (value) => {
+    setCaptchaValue(value);
+  };
+
+  const handleCaptchaExpired = () => {
+    setCaptchaValue(null);
+  };
+
+  const handleCaptchaError = () => {
+    setCaptchaValue(null);
+    toast({
+      title: "CAPTCHA error",
+      description: "There was an error loading the CAPTCHA. Please refresh the page.",
+      variant: "destructive",
+    });
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!captchaValue) {
+      toast({
+        title: "CAPTCHA verification required",
+        description: "Please complete the CAPTCHA to verify you're human.",
+        variant: "destructive",
+      });
+      return;
+    }
 
     try {
       const result = await emailjs.send(
@@ -51,6 +80,12 @@ const ContactSection = () => {
         description: "Thank you for your message. I will get back to you soon.",
       });
       setFormData({ name: "", email: "", number: "", message: "" });
+      
+      // Reset CAPTCHA
+      if (recaptchaRef.current) {
+        recaptchaRef.current.reset();
+      }
+      setCaptchaValue(null);
     } catch (error) {
       console.error("Error sending email:", error);
       toast({
@@ -154,6 +189,17 @@ const ContactSection = () => {
                 rows="5"
                 className="form-input"
                 placeholder="Your message..."
+              />
+            </div>
+
+            <div className="form-group" style={{ display: 'flex', justifyContent: 'center' }}>
+              <ReCAPTCHA
+                ref={recaptchaRef}
+                sitekey="6Lfl0t8rAAAAAHZmUI91KpQOzEgkGHOxRkQiK7T2"
+                onChange={handleCaptchaChange}
+                onExpired={handleCaptchaExpired}
+                onErrored={handleCaptchaError}
+                theme="light"
               />
             </div>
 

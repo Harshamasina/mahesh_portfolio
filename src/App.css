@@ -561,10 +561,16 @@ html {
 
 .hero-description {
   font-size: 1.125rem;
-  text-align: left;
+  text-align: justify;
   color: var(--muted-foreground);
   line-height: 1.7;
   max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .hero-description {
+    text-align: left;
+  }
 }
 
 .hero-cta {

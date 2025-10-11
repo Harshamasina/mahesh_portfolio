@@ -17,6 +17,51 @@ const FeaturedSection = () => {
               <Award className="icon-lg text-primary" />
             </div>
             <h3 className="featured-title">
+              Cellix Bio Company Profile
+            </h3>
+            <img src="/cellix_logo.png" alt="CII IPR Awards Logo" className="education-logo" />
+            <p className="featured-description">
+              Mahesh Kandula, Cellix Bio Private Limited
+            </p>
+            <p className="featured-description">Cellix is a series A company based in Hyderabad (India), founded in 2014 by Mahesh Kandula. It operates as an AI-powered platform for drug discovery and development for various diseases.</p>
+            <a href="https://tracxn.com/d/companies/cellix/__U22GnmEPDlxie2UNAMkFGnt16IHi9Pv9WbM7wIkhOpk" target="_blank" rel="noopener noreferrer" aria-label="View CII IPR Awards 2020 details">Click to view more</a>
+          </div>
+
+          <div className="glass-card featured-card stagger-item">
+            <div className="icon-container animate-float">
+              <Award className="icon-lg text-primary" />
+            </div>
+            <h3 className="featured-title">
+              Who Are the All-Time Top India-based Inventors?
+            </h3>
+            <img src="/idiyas.png" alt="CII IPR Awards Logo" className="education-logo" />
+            <p className="featured-description">
+              31. Mahesh Kandula, Cellix Bio Private Limited
+            </p>
+            <p className="featured-description">Mr. Kandula is an inventor of several potential novel molecular entities in various therapeutic areas including Thrombosis, Lipid Disorders, Diabetes, CNS, Asthma, Cancer, Neurodegenerative Diseases, Hypertension and Liver Cirrhosis.</p>
+            {/* <p>He is the sole inventor of more than 100 novel drug molecules which are currently at various stages of non-clinical and clinical development.</p> */}
+            <a href="https://idiyas.com/blog/who-is-the-all-time-top-india-based-inventors/" target="_blank" rel="noopener noreferrer" aria-label="View CII IPR Awards 2020 details">Click to view more</a>
+          </div>
+
+          <div className="glass-card featured-card stagger-item">
+            <div className="icon-container animate-float">
+              <Award className="icon-lg text-primary" />
+            </div>
+            <h3 className="featured-title">
+              Mahesh Kandula Patents – Insights & Stats
+            </h3>
+            <img src="/InsightsGate.png" alt="CII IPR Awards Logo" className="education-logo" />
+            <p className="featured-description">
+              Mahesh Kandula has filed 819 patents, out of which 227 have been granted. Of these 819 patents, more than 57% patents are active. Out of these 819 patents, 63 patents were filed only in India, out of which 15 patents has been granted.
+            </p>
+            <a href="https://insights.greyb.com/mahesh-kandula-patents/" target="_blank" rel="noopener noreferrer" aria-label="View CII IPR Awards 2020 details">Click to view more</a>
+          </div>
+
+          <div className="glass-card featured-card stagger-item">
+            <div className="icon-container animate-float">
+              <Award className="icon-lg text-primary" />
+            </div>
+            <h3 className="featured-title">
               CII IPR AWARDS
             </h3>
             <img src="/CII.png" alt="CII IPR Awards Logo" className="education-logo" />

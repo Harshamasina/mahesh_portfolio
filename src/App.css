@@ -574,7 +574,7 @@ html {
   }
   
   .hero-description {
-    text-align: left !important;
+    text-align: justify !important;
   }
 }
 

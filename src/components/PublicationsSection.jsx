@@ -16,6 +16,35 @@ const PublicationsSection = () => {
           <div className="glass-card publication-item stagger-item">
             <h3 className="publication-title">
               <FileText className="icon-sm flex-shrink-0 text-primary" />
+              Enhanced drug loading of in situ forming gels for oral mucositis pain control
+            </h3>
+            <div className="publication-authors">
+              International Journal of Pharmaceutics Volume 595, 15 February 2021, 120225
+            </div>
+            <a href="https://www.sciencedirect.com/science/article/abs/pii/S0378517321000296?via%3Dihub" target="_blank" rel="noopener noreferrer" aria-label="View publication on CLX-155A preclinical evaluation">
+              View Publication
+            </a>
+            <p>Bupivacaine γ-Linoleate, Carbopol® 974P, Pluronic® (F127 and F68) and dimethyl sulfoxide were kindly gifted by Cellix Bio.</p>
+            <p>Localized delivery to oral mucositis ulcerations requires specialized dosage forms, (e.g. in situ forming gels) delivered to the site in relatively low volumes. However, this is challenging for drugs with low solubility such as Bupivacaine γ-Linoleate (Bup-γL). The objective of this study is to develop an in situ forming gel with enhanced loading of Bup-γL for oral mucositis pain control. Two co-solvents (PEG400 and ethanol) and eight solubilizers (Tween 80, sodium lauryl sulfate, Cremophor® RH40, Cremophor® EL, Kolliphor® HS 15, Soluplus®, PEG 3350 and PEG8000) were screened for their capability to solubilize Bup-γL. Among all tested solubilizers, sodium lauryl sulfate (SLS) showed the highest solubilizing capacity (8.83 ± 0.94 mg/mL). This was considered to be a consequence of the similarity between the structure of SLS and Bup-γL. On the addition of SLS to the in situ forming gels, the drug loading was enhanced from ~6.5 to ~10.5 mg/ml. The formulations were characterized for their gelation temperature, rheological properties, in vitro drug release and short-term storage stability. The gelation temperatures of the in situ forming gel formulations were significantly reduced with enhanced drug loading. The in vitro drug release profiles showed good fit to both the first order and the Higuchi models. Formulations with SLS demonstrated sustained drug release (time to plateau ~7 h) compared with formulations without SLS (time to plateau ~3.5 h). This study offers an effective strategy to enhance drug loading of in situ forming gels. The enhanced drug loading will reduce the dosing volume and as such is expected to reduce any unwanted numbing of the healthy mucosa.</p>
+          </div>
+
+          <div className="glass-card publication-item stagger-item">
+            <h3 className="publication-title">
+              <FileText className="icon-sm flex-shrink-0 text-primary" />
+              Discovery and preclinical development of a novel prodrug conjugate of mesalamine with eicosapentaenoic acid and caprylic acid for the treatment of inflammatory bowel diseases
+            </h3>
+            <div className="publication-authors">
+              International Immunopharmacology, Volume 40, November 2016, Pages 443-451
+            </div>
+            <a href="https://www.sciencedirect.com/science/article/abs/pii/S1567576916303873" target="_blank" rel="noopener noreferrer" aria-label="View publication on CLX-155A preclinical evaluation">
+              View Publication
+            </a>
+            <p>Mesalamine (5-ASA) is one of the drugs indicated as first line therapy in ulcerative colitis for induction and maintenance of remission. Sulfasalazine and formulations of 5-ASA (pH-dependent and controlled release formulations) were developed to minimize the systemic absorption and maximize the delivery of the mesalamine to colon. Although, its efficacy and safety is well documented there are approximately 30% nonresponders to 5-ASA therapy. This necessitates the need for novel therapeutic options to improve the efficacy and safety of the currently available 5-ASA therapy. CLX-103 is a novel, patented prodrug molecular conjugate of mesalamine, eicosapentaenoic acid and caprylic acid designed to offer incremental benefits over the currently approved 5-ASA formulations. Results of in vitro and in vivo studies showed that CLX-103, was stable in simulated gastric fluid, but undergoes enzymatic hydrolysis in the small/large intestines to release the active moiety. Our data also showed that the active moiety is retained in the targeted intestinal tissues (ileum and colon) over a longer period of time in relation to sulfasalazine. The in vitro data supports the observed in vivo plasma kinetics of 5-ASA characterized by longer Tmax, low Cmax after the oral administration of CLX-103. Efficacy study of CLX-103 in acute dextran sodium sulfate (DSS) mouse colitis model showed improved potency measured as Disease Activity Index (DAI) and histological scores in the colon as compared to sulfasalazine. These findings indicate that CLX-103 could offer a differentiated drug product which is more efficacious and safer than the currently approved 5-ASA formulations in the treatment of inflammatory bowel diseases.</p>
+          </div>
+
+          <div className="glass-card publication-item stagger-item">
+            <h3 className="publication-title">
+              <FileText className="icon-sm flex-shrink-0 text-primary" />
               Preclinical Evaluation of CLX-155A: A Novel 5-FU and Valproic Acid Pro-drug in Nude Mouse Model for Activity in Colon Cancer
             </h3>
             <div className="publication-authors">

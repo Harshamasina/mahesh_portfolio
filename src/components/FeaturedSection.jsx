@@ -17,6 +17,21 @@ const FeaturedSection = () => {
               <Award className="icon-lg text-primary" />
             </div>
             <h3 className="featured-title">
+              New Therapy Targets Painful Side Effect of Cancer Treatment
+            </h3>
+            <img src="/uconn.png" alt="CII IPR Awards Logo" className="education-logo" />
+            <p className="featured-description">
+              University of Connecticut
+            </p>
+            <p className="featured-description">Collaborators are close to replacing the 'sledge hammer' with a more precise and effective treatment option that doesn’t include risk of addiction or abuse.</p>
+            <a href="https://today.uconn.edu/2019/03/new-therapy-targets-painful-side-effect-cancer-treatment/" target="_blank" rel="noopener noreferrer" aria-label="View CII IPR Awards 2020 details">Click to view more</a>
+          </div>
+
+          <div className="glass-card featured-card stagger-item">
+            <div className="icon-container animate-float">
+              <Award className="icon-lg text-primary" />
+            </div>
+            <h3 className="featured-title">
               Cellix Bio Company Profile
             </h3>
             <img src="/cellix_logo.png" alt="CII IPR Awards Logo" className="education-logo" />

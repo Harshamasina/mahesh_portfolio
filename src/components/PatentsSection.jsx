@@ -237,16 +237,28 @@ const PatentsSection = () => {
           </div>
         </div>
 
-        <div className="flex justify-center mb-8 patent_button">
-          <a href="https://insights.greyb.com/mahesh-kandula-patents/" target="_blank" rel="noopener noreferrer" aria-label="View all stats by Mahesh Kandula on GreyB">
-            View More Stats
-          </a>
-        </div>
+        <div className="patent_button-group">
+          <div className="patent_button">
+            <a
+              href="https://insights.greyb.com/mahesh-kandula-patents/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View all stats by Mahesh Kandula on GreyB"
+            >
+              View More Stats
+            </a>
+          </div>
 
-        <div className="flex justify-center mb-8 patent_button">
-          <a href="https://patents.justia.com/inventor/mahesh-kandula" target="_blank" rel="noopener noreferrer" aria-label="View all patents by Mahesh Kandula on Justia">
-            View All Patents
-          </a>
+          <div className="patent_button">
+            <a
+              href="https://patents.justia.com/inventor/mahesh-kandula"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View all patents by Mahesh Kandula on Justia"
+            >
+              View All Patents
+            </a>
+          </div>
         </div>
       </div>
     </section>

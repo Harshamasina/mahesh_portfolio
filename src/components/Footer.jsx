@@ -24,7 +24,7 @@ const Footer = () => {
               <li className="footer-tagline">20+ Years of Experience</li>
               <li className="footer-tagline">700+ International Patents</li>
               <li className="footer-tagline">Sole Inventor</li>
-              <li className="footer-tagline">Multple Threapeutic Areas</li>
+              <li className="footer-tagline">Multiple Threapeutic Areas</li>
             </ol>
           </div>
 

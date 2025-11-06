@@ -17,6 +17,21 @@ const FeaturedSection = () => {
               <Award className="icon-lg text-primary" />
             </div>
             <h3 className="featured-title">
+              Winners of the South Asia Innovation Awards 2024
+            </h3>
+            <img src="/clarivate.png" alt="CII IPR Awards Logo" className="education-logo" />
+            <p className="featured-description">
+              Clarivate
+            </p>
+            <p className="featured-description">The South Asia Innovation Awards 2024 winners were announced today in Mumbai, India, by Clarivate, a top worldwide supplier of disruptive knowledge. Cellix Bio is one of the sixteen Indian companies.</p>
+            <a href="https://theprint.in/ani-press-releases/clarivate-announces-winners-of-the-south-asia-innovation-awards-2024/2057705/" target="_blank" rel="noopener noreferrer" aria-label="View Clarivate 2024 Awards">Click to view more</a>
+          </div>
+          
+          <div className="glass-card featured-card stagger-item">
+            <div className="icon-container animate-float">
+              <Award className="icon-lg text-primary" />
+            </div>
+            <h3 className="featured-title">
               New Therapy Targets Painful Side Effect of Cancer Treatment
             </h3>
             <img src="/uconn.png" alt="CII IPR Awards Logo" className="education-logo" />

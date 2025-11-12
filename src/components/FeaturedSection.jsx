@@ -19,8 +19,8 @@ const FeaturedSection = () => {
             <h3 className="featured-title">
               Winners of the South Asia Innovation Awards 2024
             </h3>
-            <img src="/clarivate.png" alt="CII IPR Awards Logo" className="education-logo" />
-            <p className="featured-description">
+            <img src="/print.png" alt="CII IPR Awards Logo" className="education-logo" />
+            <p className="featured-description_1">
               Clarivate
             </p>
             <p className="featured-description">The South Asia Innovation Awards 2024 winners were announced today in Mumbai, India, by Clarivate, a top worldwide supplier of disruptive knowledge. Cellix Bio is one of the sixteen Indian companies.</p>
@@ -35,7 +35,7 @@ const FeaturedSection = () => {
               New Therapy Targets Painful Side Effect of Cancer Treatment
             </h3>
             <img src="/uconn.png" alt="CII IPR Awards Logo" className="education-logo" />
-            <p className="featured-description">
+            <p className="featured-description_1">
               University of Connecticut
             </p>
             <p className="featured-description">Collaborators are close to replacing the 'sledge hammer' with a more precise and effective treatment option that doesn’t include risk of addiction or abuse.</p>
@@ -47,10 +47,25 @@ const FeaturedSection = () => {
               <Award className="icon-lg text-primary" />
             </div>
             <h3 className="featured-title">
+              V ClinBio Acquires 49.98% Stake in Cellix Bio
+            </h3>
+            <img src="/NJBusiness.png" alt="CII IPR Awards Logo" className="education-logo" />
+            <p className="featured-description_1">
+              New Jersey Business Magazine
+            </p>
+            <p className="featured-description">Newark-based V ClinBio Inc., an innovative biopharmaceutical company focused on transforming existing compounds into differentiated new therapeutics, announced that it has acquired a 49.98% equity stake in Cellix Bio, an innovative drug design and development company.</p>
+            <a href="https://njbmagazine.com/njb-news-now/v-clinbio-acquires-49-98-stake-cellix-bio/" target="_blank" rel="noopener noreferrer" aria-label="View CII IPR Awards 2020 details">Click to view more</a>
+          </div>
+
+          <div className="glass-card featured-card stagger-item">
+            <div className="icon-container animate-float">
+              <Award className="icon-lg text-primary" />
+            </div>
+            <h3 className="featured-title">
               Cellix Bio Company Profile
             </h3>
             <img src="/cellix_logo.png" alt="CII IPR Awards Logo" className="education-logo" />
-            <p className="featured-description">
+            <p className="featured-description_1">
               Mahesh Kandula, Cellix Bio Private Limited
             </p>
             <p className="featured-description">Cellix is a series A company based in Hyderabad (India), founded in 2014 by Mahesh Kandula. It operates as an AI-powered platform for drug discovery and development for various diseases.</p>
@@ -65,7 +80,7 @@ const FeaturedSection = () => {
               Who Are the All-Time Top India-based Inventors?
             </h3>
             <img src="/idiyas.png" alt="CII IPR Awards Logo" className="education-logo" />
-            <p className="featured-description">
+            <p className="featured-description_1">
               31. Mahesh Kandula, Cellix Bio Private Limited
             </p>
             <p className="featured-description">Mr. Kandula is an inventor of several potential novel molecular entities in various therapeutic areas including Thrombosis, Lipid Disorders, Diabetes, CNS, Asthma, Cancer, Neurodegenerative Diseases, Hypertension and Liver Cirrhosis.</p>
@@ -81,6 +96,7 @@ const FeaturedSection = () => {
               Mahesh Kandula Patents – Insights & Stats
             </h3>
             <img src="/InsightsGate.png" alt="CII IPR Awards Logo" className="education-logo" />
+            <p className="featured-description_1">Insights By GreyB</p>
             <p className="featured-description">
               Mahesh Kandula has filed 819 patents, out of which 227 have been granted. Of these 819 patents, more than 57% patents are active. Out of these 819 patents, 63 patents were filed only in India, out of which 15 patents has been granted.
             </p>
@@ -95,6 +111,7 @@ const FeaturedSection = () => {
               CII IPR AWARDS
             </h3>
             <img src="/CII.png" alt="CII IPR Awards Logo" className="education-logo" />
+            <p className="featured-description_1">CII</p>
             <p className="featured-description">
               Cellix Bio Private Limited won the award in the Category of Best Patent Portfolio, Startup-Life Sc/Pharma, Sep 2020
             </p>
@@ -109,6 +126,7 @@ const FeaturedSection = () => {
               Clarivate Announces Winners of the South Asia Innovation Awards 2024
             </h3>
             <img src="/clarivate.png" alt="Clarivate Awards Logo" className="education-logo" />
+            <p className="featured-description_1">Clarivate</p>
             <p className="featured-description">
               India Emerging Player Winners - Cellix Bio Private Limited, Issued by Clarivate Plc (NYSE: CLVT)
             </p>
@@ -123,8 +141,9 @@ const FeaturedSection = () => {
               Best Patents Portfolio in the startup, life science/pharma sector
             </h3>
             <img src="/CII.png" alt="CII Awards Logo" className="education-logo" />
+            <p className="featured-description_1">CII</p>
             <p className="featured-description">
-              Presented by the Confederation of Indian Industry (CII)
+              Presented by the Confederation of Indian Industry
             </p>
             <a href="https://www.cii.in/ResourceDetails.aspx?enc=eeluWXRJlM2vmIyxaBXYKTP9ZQ8Rd1mnjG86D/VDnSOLUmx+ZN9CdfdpD05r3yz5onLbEZ/r/Qy6HkixN/4s3nSy+weJ/tsuIa/NNCUrczFUVehlxhW60xv6I+jy0/5hOc8aQATp20eYSQanbLRdxD0674DoSaVLxfVpXsY3BCyeXfOMvQElf2neWzW2/VCg" target="_blank" rel="noopener noreferrer" aria-label="View CII Best Patent Portfolio award details">Click to view more</a>
           </div>

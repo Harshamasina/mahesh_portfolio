@@ -7,7 +7,7 @@ const Navigation = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <a href="#about" className="navbar-brand">
-          <img src="/logo_transparent_small.png" alt="Mahesh Kandula Logo" className="navbar-logo" />
+          <img src="/mahesh_logo.png" alt="Mahesh Kandula Logo" className="navbar-logo" />
           Mahesh Kandula
         </a>
         <button

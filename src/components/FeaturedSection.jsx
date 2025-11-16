@@ -47,7 +47,7 @@ const FeaturedSection = () => {
               <Award className="icon-lg text-primary" />
             </div>
             <h3 className="featured-title">
-              V ClinBio Acquires 49.98% Stake in Cellix Bio
+              Synergix
             </h3>
             <img src="/NJBusiness.png" alt="CII IPR Awards Logo" className="education-logo" />
             <p className="featured-description_1">

@@ -16,6 +16,24 @@ const ExperienceSection = () => {
             <div className="experience-item">
               <div className="experience-period">
                 <Calendar className="icon-sm" />
+                Nov 2025 - Present
+              </div>
+              <h3 className="experience-title">
+                <Target className="icon-sm" />
+                Health Law Research
+              </h3>
+              <div className="experience-company">
+                <a href="https://www.modernathemisjuris.com/" aria-label="Moderna Themis Juris Web App" target="_blank"><img src="/moderna_logo.png" alt="Cellix Bio" className="experience-logo" /></a>
+              </div>
+              <p className="experience-description">
+                Legal research and advisory for preventive care, food, biotech and pharmaceutical businesses. 
+              </p>
+              <p className="experience-description">We decode complex statutory and regulatory frameworks to help you navigate compliance, mitigate risk, and elevate operational efficiency.</p>
+            </div>
+
+            <div className="experience-item">
+              <div className="experience-period">
+                <Calendar className="icon-sm" />
                 Sep 2022 - Apr 2025
               </div>
               <h3 className="experience-title">
@@ -23,7 +41,7 @@ const ExperienceSection = () => {
                 Board Member
               </h3>
               <div className="experience-company">
-                <img src="/cellix_logo.png" alt="Cellix Bio" className="experience-logo" />
+                <a href="https://cellixbioscience.com/" aria-label="Moderna Themis Juris Web App" target="_blank"><img src="/cellix_logo.png" alt="Cellix Bio" className="experience-logo" /></a>
               </div>
               <p className="experience-description">
                 Cellix Bio is an innovative drug design and development bio-pharmaceutical company focused to develop best-in-class therapies for the treatment of Neurological, Inflammatory and Metabolic Diseases.
@@ -43,7 +61,7 @@ const ExperienceSection = () => {
                 Managing Director & CEO
               </h3>
               <div className="experience-company">
-                <img src="/cellix_logo.png" alt="Cellix Bio" className="experience-logo" />
+                <a href="https://cellixbioscience.com/" aria-label="Moderna Themis Juris Web App" target="_blank"><img src="/cellix_logo.png" alt="Cellix Bio" className="experience-logo" /></a>
               </div>
               <p className="experience-description">
                 Leading a team of scientists and researchers in developing

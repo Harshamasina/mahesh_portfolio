@@ -16,6 +16,21 @@ const PublicationsSection = () => {
           <div className="glass-card publication-item stagger-item">
             <h3 className="publication-title">
               <FileText className="icon-sm flex-shrink-0 text-primary" />
+              Preclinical Evaluation of a Pilocarpine–(R)-Lipoic Acid Eye Drop for Presbyopia
+            </h3>
+            <div className="publication-authors">
+              Translational Vision Science & Technology November 2025, Vol.14, 17.
+            </div>
+            <a href="https://tvst.arvojournals.org/article.aspx?articleid=2811085" target="_blank" rel="noopener noreferrer" aria-label="View publication on CLX-155A preclinical evaluation">
+              View Publication
+            </a>
+            <p>Presbyopia is a progressive, age-related loss of near vision. Although current therapies offer symptomatic relief, they fail to target the underlying pathology. These studies investigated a novel dual-mechanism eye drop, CLX-162 (pilocarpine lipoate salt), focusing on three key characteristics: (1) tolerability, (2) pharmacokinetics and ocular tissue penetration, and (3) chemical stability within a dual-chamber delivery system.</p>
+            <p>CLX-162 demonstrated superior ocular tolerability compared to LACE, with no corneal, iridial, or conjunctival effects observed. It induced transient pupillary constriction, whereas LACE caused mild redness and discharge. Pharmacokinetic analysis showed that CLX-162 achieved significantly higher and longer lasting (R)-lipoic acid levels in the aqueous humor and lens than LACE. Pilocarpine remained detectable for up to 8 hours. Stability studies confirmed that CLX-162 retained potency for 6 months in the dual-chamber container, with pilocarpine and (R)-lipoic acid levels within 95% to 100%. After reconstitution, it remained stable for 21 days.</p>
+          </div>
+
+          <div className="glass-card publication-item stagger-item">
+            <h3 className="publication-title">
+              <FileText className="icon-sm flex-shrink-0 text-primary" />
               Enhanced drug loading of in situ forming gels for oral mucositis pain control
             </h3>
             <div className="publication-authors">

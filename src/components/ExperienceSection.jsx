@@ -28,7 +28,6 @@ const ExperienceSection = () => {
               <p className="experience-description">
                 Legal research and advisory for preventive care, food, biotech and pharmaceutical businesses. 
               </p>
-              <p className="experience-description">We decode complex statutory and regulatory frameworks to help you navigate compliance, mitigate risk, and elevate operational efficiency.</p>
             </div>
 
             <div className="experience-item">

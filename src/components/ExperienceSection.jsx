@@ -20,7 +20,7 @@ const ExperienceSection = () => {
               </div>
               <h3 className="experience-title">
                 <Target className="icon-sm" />
-                Health Law Research
+                Healthcare Law Research
               </h3>
               <div className="experience-company">
                 <a href="https://www.modernathemisjuris.com/" aria-label="Moderna Themis Juris Web App" target="_blank"><img src="/moderna_logo.png" alt="Cellix Bio" className="experience-logo" /></a>

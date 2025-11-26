@@ -1,4 +1,4 @@
-import { Briefcase, Calendar, Building2, Target, TrendingUp, Microscope } from "lucide-react";
+import { Briefcase, Calendar, Building2, Target, TrendingUp, Microscope, Scale } from "lucide-react";
 
 const ExperienceSection = () => {
   return (
@@ -19,7 +19,7 @@ const ExperienceSection = () => {
                 Nov 2025 - Present
               </div>
               <h3 className="experience-title">
-                <Target className="icon-sm" />
+                <Scale className="icon-sm" />
                 Healthcare Law Research
               </h3>
               <div className="experience-company">

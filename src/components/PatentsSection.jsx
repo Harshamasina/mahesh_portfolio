@@ -2,6 +2,8 @@ import { Award, Dna, FlaskConical, Microscope, Target, CheckCircle2, TrendingUp,
 import { Button } from "./ui/button";
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip, Legend, Cell } from "recharts";
 import { useState, useEffect } from "react";
+import Patents from "./Patents";
+import PatentSearchBar from "./PatentSearchBar";
 
 const PatentsSection = () => {
   const [axisColor, setAxisColor] = useState("");
@@ -236,6 +238,9 @@ const PatentsSection = () => {
             </ResponsiveContainer>
           </div>
         </div>
+
+        <PatentSearchBar />
+        <Patents />
 
         <div className="patent_button-group">
           <div className="patent_button">

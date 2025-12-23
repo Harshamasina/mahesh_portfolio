@@ -13,7 +13,8 @@ import {
     ChevronLeft,
     ChevronRight,
     Bug,
-    X
+    X,
+    FileDigit
 } from "lucide-react";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL?.replace(/\/+$/, "");
@@ -175,7 +176,7 @@ const PatentSearchBar = () => {
                         WNO
                     </span>
                     <span className="patent-search__chip">
-                        <Hash className="icon-sm" />
+                        <FileDigit className="icon-sm" />
                         PCT
                     </span>
                     <span className="patent-search__chip">

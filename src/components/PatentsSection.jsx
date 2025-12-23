@@ -240,7 +240,7 @@ const PatentsSection = () => {
         </div>
 
         <PatentSearchBar />
-        <Patents />
+        {/* <Patents /> */}
 
         <div className="patent_button-group">
           <div className="patent_button">

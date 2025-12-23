@@ -1092,7 +1092,7 @@ html {
 /* Patent Search */
 .patent-search {
   margin: 3rem auto 2rem;
-  max-width: 1100px;
+  max-width: 1200px;
   padding: 0 1rem;
 }
 
@@ -1219,6 +1219,12 @@ html {
 
 .patent-search__results {
   margin-top: 2rem;
+}
+
+.patent-results-count {
+  margin-bottom: 1rem;
+  color: var(--muted-foreground);
+  font-weight: 600;
 }
 
 .patent-empty--loading {

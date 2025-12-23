@@ -141,7 +141,7 @@ const PatentSearchBar = () => {
                         Explore the Patent Portfolio
                     </h3>
                     <p className="patent-search__subtitle">
-                        Search by WNO, PCT, therapeutic area or focus disease to explore the latest filings.
+                        Search by WIPO, PCT, therapeutic area or focus disease to explore the latest filings.
                     </p>
                 </div>
                 <form className="patent-search__form" onSubmit={handleSubmit}>
@@ -173,7 +173,7 @@ const PatentSearchBar = () => {
                 <div className="patent-search__filters" aria-label="Suggested filters">
                     <span className="patent-search__chip">
                         <Hash className="icon-sm" />
-                        WNO
+                        WIPO
                     </span>
                     <span className="patent-search__chip">
                         <FileDigit className="icon-sm" />
@@ -204,6 +204,11 @@ const PatentSearchBar = () => {
                     <div className="patent-empty">No patents match your search.</div>
                 ) : null}
                 {hasSearched && pageItems.length ? (
+                    <div className="patent-results-count">
+                        Showing {pageItems.length} of {results.length} results
+                    </div>
+                ) : null}
+                {hasSearched && pageItems.length ? (
                     <div key={resultsKey} className="patents-grid patent-cards patent-cards--search">
                         {pageItems.map((patent, index) => {
                             const patentId = String(patent?._id || `${patent?.wno || "patent"}-${index}`);
@@ -222,7 +227,7 @@ const PatentSearchBar = () => {
                                     <div className="patent-card__header">
                                         <div className="patent-card__label">
                                             <Hash className="icon-sm" />
-                                            WNO
+                                            WIPO
                                         </div>
                                         <div className="patent-card__value">{wno}</div>
                                     </div>

@@ -128,9 +128,12 @@ const PatentSearchBar = () => {
 
     const totalPages = Math.max(1, Math.ceil(results.length / ITEMS_PER_PAGE));
     const safePage = Math.min(currentPage, totalPages);
-    const pageItems = useMemo(() => {
-        const startIndex = (safePage - 1) * ITEMS_PER_PAGE;
-        return results.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+    const { pageItems, startIndex } = useMemo(() => {
+        const start = (safePage - 1) * ITEMS_PER_PAGE;
+        return {
+            startIndex: start,
+            pageItems: results.slice(start, start + ITEMS_PER_PAGE),
+        };
     }, [results, safePage]);
 
     return (
@@ -138,10 +141,10 @@ const PatentSearchBar = () => {
             <div className="patent-search__glass">
                 <div className="patent-search__header">
                     <h3 id="patent-search-heading" className="patent-search__title">
-                        Explore the Patent Portfolio
+                        Explore Mahesh Kandula's Patent Portfolio
                     </h3>
                     <p className="patent-search__subtitle">
-                        Search by WIPO, PCT, therapeutic area or focus disease to explore the latest filings.
+                        Search by WIPO, PCT or by Therapeutic areas
                     </p>
                 </div>
                 <form className="patent-search__form" onSubmit={handleSubmit}>
@@ -205,7 +208,7 @@ const PatentSearchBar = () => {
                 ) : null}
                 {hasSearched && pageItems.length ? (
                     <div className="patent-results-count">
-                        Showing {pageItems.length} of {results.length} results
+                        Showing {startIndex + 1} - {startIndex + pageItems.length} of {results.length} results
                     </div>
                 ) : null}
                 {hasSearched && pageItems.length ? (

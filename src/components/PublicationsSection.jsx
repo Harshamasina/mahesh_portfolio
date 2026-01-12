@@ -17,7 +17,7 @@ const publications = [
     id: "pub-2",
     title: "Enhanced drug loading of in situ forming gels for oral mucositis pain control",
     authors: "International Journal of Pharmaceutics Volume 595, 15 February 2021, 120225",
-    link: "https://www.sciencedirect.com/science/article/abs/pii/S0378517321000296γvia%3Dihub",
+    link: "https://pubmed.ncbi.nlm.nih.gov/33486019/",
     ariaLabel: "View publication on CLX-155A preclinical evaluation",
     paragraphs: [
       "Bupivacaine γ-Linoleate, Carbopolr 974P, Pluronicr (F127 and F68) and dimethyl sulfoxide were kindly gifted by Cellix Bio.",
@@ -90,7 +90,7 @@ const publications = [
     id: "pub-9",
     title: "Sulfotransferase 1A1 (SULT1A1) Polymorphism and Breast Cancer Risk: a Case-control Study in South India",
     authors: "American Journals of Cancer Science ú Jun 20, 2013",
-    link: "https://pubmed.ncbi.nlm.nih.gov/15093672/",
+    link: "https://files01.core.ac.uk/download/286338134.pdf",
     ariaLabel: "View publication on CLX-155A preclinical evaluation",
     paragraphs: [
       "Breast cancer is the most common cancer among women worldwide. Sulfotransferase plays an important role in the formation of estrogen which is usually conferred as a risk factor for breast cancer. The SULT1A1*2 polymorphism is likely to play an important role in the susceptibility to breast cancer. This polymorphism (G638A) in the sulfotransferase 1A1 (SULT1A1) gene may causes Arg213His amino acid change and consequently results in significantly reduced enzyme activity and thermostability.",
@@ -120,7 +120,7 @@ const publications = [
     id: "pub-12",
     title: "Differences in Gene Expression Profiles between Human Breast Tissue and Peripheral Blood Samples for Breast Cancer Detection",
     authors: "Journal of Cancer Science and Therapy ú Oct 29, 2012",
-    link: "http://www.omicsonline.org/1948.../pdfdownload.php?",
+    link: "https://www.hilarispublisher.com/open-access/differences-in-gene-expression-profiles-between-human-breast-tissue-and-peripheral-blood-samples-for-breast-cancer-detection-1948-5956.1000171.pdf",
     ariaLabel: "View publication on CLX-155A preclinical evaluation",
     paragraphs: [
       "The purpose of this study is to check the similarities of differential gene expression of 11 genes in breast cancer tissue and blood samples from the same individual for early detection of breast cancer. We had investigated differential gene expression by qRT-PCR in 20 breast cancer patients' tumoral tissues and corresponding blood sample. In our analysis BRCA2, HER-2, ER, PR, MET and BRAF mRNA levels were significantly over expressed in tumoral tissues. ER and PR mRNA levels were not detected in any of the peripheral blood samples, whereas KRAS and PTEN mRNA levels were not detected in any of the tumoral tissues. HER-2 (45%), EGFR (40%) and PI3KCA (30%). KRAS and PTEN mRNA levels were significantly over expressed in peripheral blood. In the correlation analysis expression of most of the genes were significantly altered in grade II and III in the tissues, where as in premenopausal women mRNA expression was significantly high in Grade II and III and ER/PR negative tumors. Our results suggests that BRCA2, ER, PR, PI3KCA, MET and BRAF differential gene expression at mRNA levels showed no diagnostic value as a marker of circulating tumour cells in breast cancer. qRT-PCR may be suitable alternative method for the determination of HER-2, EGFR, PI3KCA KRAS and PTEN mRNA status in the blood of breast cancer patients. Premenopausal women with high grade (Grade II and III) and ER/PR negative cases may be associated with proliferation/ metastasis, high recurrence rate, and poor prognosis.",

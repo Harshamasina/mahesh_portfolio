@@ -26,6 +26,21 @@ const FeaturedSection = () => {
             <p className="featured-description">The South Asia Innovation Awards 2024 winners were announced today in Mumbai, India, by Clarivate, a top worldwide supplier of disruptive knowledge. Cellix Bio is one of the sixteen Indian companies.</p>
             <a href="https://theprint.in/ani-press-releases/clarivate-announces-winners-of-the-south-asia-innovation-awards-2024/2057705/" target="_blank" rel="noopener noreferrer" aria-label="View Clarivate 2024 Awards">Click to view more</a>
           </div>
+
+          <div className="glass-card featured-card stagger-item">
+            <div className="icon-container animate-float">
+              <Award className="icon-lg text-primary" />
+            </div>
+            <h3 className="featured-title">
+              Mahesh Kandula | Scholar Profiles and Rankings
+            </h3>
+            <img src="/scholargps_logo.png" alt="CII IPR Awards Logo" className="education-logo" />
+            <p className="featured-description_1">
+              ScholarGPS
+            </p>
+            <p className="featured-description">Uniquely identifies top scholars, institutions, and countries across every Field, Discipline, and Specialty.</p>
+            <a href="https://scholargps.com/scholars/22202951689250/mahesh-kandula" target="_blank" rel="noopener noreferrer" aria-label="Scholar Profiles and Rankings">Click to view more</a>
+          </div>
           
           <div className="glass-card featured-card stagger-item">
             <div className="icon-container animate-float">

@@ -93,9 +93,9 @@ const HeroSection = () => {
             <p className="hero-description">
               I'm an entrepreneur and scientist with a proven record of creating transformative life sciences ventures. As the sole inventor of 100+ novel drug molecules across major therapeutic areas, I've advanced innovations from discovery to clinical trials. With multiple patents and global pharma collaborations, I bring expertise in IP, strategy, and team leadership to drive bold ideas into real-world therapies
             </p>
-            <a href="#patents" className="hero-cta" aria-label="Click to View Patents">
-              <FolderSearch className="icon-sm" aria-hidden="true" />
-              View my Patents
+            <a href="#contact" className="hero-cta" aria-label="Click to Contact me">
+              <Mail className="icon-sm" aria-hidden="true" />
+              Get In Touch
             </a>
           </article>
 

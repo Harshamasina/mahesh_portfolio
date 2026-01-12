@@ -1440,6 +1440,18 @@ html {
   color: var(--foreground);
 }
 
+.patent-highlight {
+  background: rgba(59, 130, 246, 0.2);
+  color: var(--primary);
+  padding: 0 0.15em;
+  border-radius: 0.2em;
+}
+
+.dark .patent-highlight {
+  background: rgba(96, 165, 250, 0.25);
+  color: var(--primary);
+}
+
 .patent-card__area {
   font-size: 0.95rem;
   line-height: 1.4;

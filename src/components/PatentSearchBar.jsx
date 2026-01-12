@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import axios from "axios";
+import Highlighter from "react-highlight-words";
 import {
     Search,
     SlidersHorizontal,
@@ -32,6 +33,7 @@ const PatentSearchBar = () => {
     const [resultsKey, setResultsKey] = useState(0);
     const [showNoResults, setShowNoResults] = useState(false);
     const [searchNonce, setSearchNonce] = useState(0);
+    const highlightWords = query ? [query] : [];
 
     const handleClearSearch = () => {
         setSearchTerm("");
@@ -232,7 +234,14 @@ const PatentSearchBar = () => {
                                             <Hash className="icon-sm" />
                                             WIPO
                                         </div>
-                                        <div className="patent-card__value">{wno}</div>
+                                        <div className="patent-card__value">
+                                            <Highlighter
+                                                searchWords={highlightWords}
+                                                textToHighlight={String(wno)}
+                                                autoEscape
+                                                highlightClassName="patent-highlight"
+                                            />
+                                        </div>
                                     </div>
                                     <div className="patent-card__section">
                                         <div className="patent-card__label">
@@ -240,7 +249,12 @@ const PatentSearchBar = () => {
                                             Therapeutic Area
                                         </div>
                                         <div className="patent-card__value patent-card__area">
-                                            {therapeuticArea}
+                                            <Highlighter
+                                                searchWords={highlightWords}
+                                                textToHighlight={String(therapeuticArea)}
+                                                autoEscape
+                                                highlightClassName="patent-highlight"
+                                            />
                                         </div>
                                     </div>
                                     <div className="patent-card__section">
@@ -248,7 +262,14 @@ const PatentSearchBar = () => {
                                             <Calendar className="icon-sm" />
                                             Publication Date
                                         </div>
-                                        <div className="patent-card__value">{publicationDate}</div>
+                                        <div className="patent-card__value">
+                                            <Highlighter
+                                                searchWords={highlightWords}
+                                                textToHighlight={String(publicationDate)}
+                                                autoEscape
+                                                highlightClassName="patent-highlight"
+                                            />
+                                        </div>
                                     </div>
 
                                     <button
@@ -269,11 +290,25 @@ const PatentSearchBar = () => {
                                         <div className="patent-card__details">
                                             <div className="patent-card__detail">
                                                 <span>Diseases</span>
-                                                <p>{diseases}</p>
+                                                <p>
+                                                    <Highlighter
+                                                        searchWords={highlightWords}
+                                                        textToHighlight={String(diseases)}
+                                                        autoEscape
+                                                        highlightClassName="patent-highlight"
+                                                    />
+                                                </p>
                                             </div>
                                             <div className="patent-card__detail">
                                                 <span>PCT</span>
-                                                <p>{pct}</p>
+                                                <p>
+                                                    <Highlighter
+                                                        searchWords={highlightWords}
+                                                        textToHighlight={String(pct)}
+                                                        autoEscape
+                                                        highlightClassName="patent-highlight"
+                                                    />
+                                                </p>
                                             </div>
                                         </div>
                                     ) : null}

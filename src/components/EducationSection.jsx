@@ -14,7 +14,19 @@ const EducationSection = () => {
         <div className="education-grid">
           <div className="glass-card education-card stagger-item">
             <div className="icon-container mx-auto">
-              <Scale className="icon-md text-primary" />
+              <img src="/labour-law.png" alt="Suitcase" className="icon-md text-primary" />
+            </div>
+            <h3 className="education-degree">
+              Executive
+            </h3>
+            <img src="/icsi.png" alt="Osmania University Logo" className="education-logo" />
+            <div className="education-institution">Institute of Company Secretaries of India</div>
+            <div className="education-year">2026 - 2027</div>
+          </div>
+
+          <div className="glass-card education-card stagger-item">
+            <div className="icon-container mx-auto">
+              <img src="/agreement.png" alt="Suitcase" className="icon-md text-primary" />
             </div>
             <h3 className="education-degree">
               Bachelor of Laws (LLB)
@@ -26,7 +38,7 @@ const EducationSection = () => {
 
           <div className="glass-card education-card stagger-item">
             <div className="icon-container mx-auto">
-              <Scale className="icon-md text-primary" />
+              <img src="/regulation.png" alt="Suitcase" className="icon-md text-primary" />
             </div>
             <h3 className="education-degree">Master of Laws (LLM), Innovation, Technology and the Law</h3>
             <img src="/edingurg.png" alt="University of Edinburgh Logo" className="education-logo" />
@@ -36,7 +48,7 @@ const EducationSection = () => {
 
           <div className="glass-card education-card stagger-item">
             <div className="icon-container mx-auto">
-              <Briefcase className="icon-md text-primary" />
+              <img src="/portfolio.png" alt="Suitcase" className="icon-md text-primary" />
             </div>
             <h3 className="education-degree">Master of Business Adminsitration (M.B.A), Entreprenuership Studies</h3>
             <img src="/babson.png" alt="Babson College Logo" className="education-logo" />
@@ -46,7 +58,7 @@ const EducationSection = () => {
 
           <div className="glass-card education-card stagger-item">
             <div className="icon-container mx-auto">
-              <Target className="icon-md text-primary" />
+              <img src="/project-team.png" alt="Suitcase" className="icon-md text-primary" />
             </div>
             <h3 className="education-degree">SCPM - Project Management</h3>
             <img src="/stanford.png" alt="Stanford University Logo" className="education-logo" />
@@ -56,7 +68,7 @@ const EducationSection = () => {
 
           <div className="glass-card education-card stagger-item">
             <div className="icon-container mx-auto">
-              <FlaskConical className="icon-md text-primary" />
+              <img src="/biotech.png" alt="Suitcase" className="icon-md text-primary" />
             </div>
             <h3 className="education-degree">Master's Degree, Biotechnology and Biochemical Engineering</h3>
             <img src="/IIT.png" alt="IIT Kharagpur Logo" className="education-logo" />

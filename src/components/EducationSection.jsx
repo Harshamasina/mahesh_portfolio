@@ -75,6 +75,26 @@ const EducationSection = () => {
             <div className="education-institution">Indian Institute of Technology, Kharagpur</div>
             <div className="education-year">2005</div>
           </div>
+
+          <div className="glass-card education-card stagger-item">
+            <div className="icon-container mx-auto">
+              <img src="/biotech.png" alt="Suitcase" className="icon-md text-primary" />
+            </div>
+            <h3 className="education-degree">Master of Sciences, BioTechnology</h3>
+            <img src="/au_logo.png" alt="IIT Kharagpur Logo" className="education-logo" />
+            <div className="education-institution">Andhra University, Vishakaptnam</div>
+            <div className="education-year">2000 - 2002</div>
+          </div>
+
+          <div className="glass-card education-card stagger-item">
+            <div className="icon-container mx-auto">
+              <img src="/biotech.png" alt="Suitcase" className="icon-md text-primary" />
+            </div>
+            <h3 className="education-degree">Bachelor of Sciences, BioTechnology, Chemistry</h3>
+            <img src="/au_logo.png" alt="IIT Kharagpur Logo" className="education-logo" />
+            <div className="education-institution">Andhra University, Vishakaptnam</div>
+            <div className="education-year">1997 - 2000</div>
+          </div>
         </div>
       </div>
     </section>

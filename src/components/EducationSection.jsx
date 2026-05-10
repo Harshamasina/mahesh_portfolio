@@ -9,9 +9,21 @@ const EducationSection = () => {
           Education
         </h2>
         <p className="section-subtitle">
-          Academic foundations spanning Biotechnology, Law (LLB, LLM), and Business Administration (MBA). Interdisciplinary education from world-renowned institutions including IIT Kharagpur, Babson College, University of Edinburgh, and Stanford University
+          Academic foundations spanning Biotechnology, Law (LLB, LLM) and Business Administration (MBA). Interdisciplinary education from world-renowned institutions including IIT Kharagpur, Babson College, University of Edinburgh, and Stanford University
         </p>
         <div className="education-grid">
+          <div className="glass-card education-card stagger-item">
+            <div className="icon-container mx-auto">
+              <img src="/agreement.png" alt="Suitcase" className="icon-md text-primary" />
+            </div>
+            <h3 className="education-degree">
+              Master of Laws (LLM) <br /> Corporate and Securities Law
+            </h3>
+            <img src="/osmania.png" alt="Osmania University Logo" className="education-logo" />
+            <div className="education-institution">Osmania University, Hyderabad</div>
+            <div className="education-year">2025 - 2027</div>
+          </div>
+
           <div className="glass-card education-card stagger-item">
             <div className="icon-container mx-auto">
               <img src="/labour-law.png" alt="Suitcase" className="icon-md text-primary" />
@@ -40,7 +52,7 @@ const EducationSection = () => {
             <div className="icon-container mx-auto">
               <img src="/regulation.png" alt="Suitcase" className="icon-md text-primary" />
             </div>
-            <h3 className="education-degree">Master of Laws (LLM), Innovation, Technology and the Law</h3>
+            <h3 className="education-degree">Master of Laws (LLM) Innovation, Technology and the Law</h3>
             <img src="/edingurg.png" alt="University of Edinburgh Logo" className="education-logo" />
             <div className="education-institution">The University of Edinburgh</div>
             <div className="education-year">2012 - 2014</div>
@@ -50,7 +62,7 @@ const EducationSection = () => {
             <div className="icon-container mx-auto">
               <img src="/portfolio.png" alt="Suitcase" className="icon-md text-primary" />
             </div>
-            <h3 className="education-degree">Master of Business Adminsitration (M.B.A), Entreprenuership Studies</h3>
+            <h3 className="education-degree">Master of Business Adminsitration (M.B.A) Entreprenuership Studies</h3>
             <img src="/babson.png" alt="Babson College Logo" className="education-logo" />
             <div className="education-institution">Babson College</div>
             <div className="education-year">2011 - 2013</div>
@@ -70,17 +82,17 @@ const EducationSection = () => {
             <div className="icon-container mx-auto">
               <img src="/biotech.png" alt="Suitcase" className="icon-md text-primary" />
             </div>
-            <h3 className="education-degree">Master's Degree, Biotechnology and Biochemical Engineering</h3>
+            <h3 className="education-degree">Master of Technology (M.Tech)<br />Biotechnology and Biochemical Engineering</h3>
             <img src="/IIT.png" alt="IIT Kharagpur Logo" className="education-logo" />
             <div className="education-institution">Indian Institute of Technology, Kharagpur</div>
-            <div className="education-year">2005</div>
+            <div className="education-year">2003 - 2005</div>
           </div>
 
           <div className="glass-card education-card stagger-item">
             <div className="icon-container mx-auto">
               <img src="/biotech.png" alt="Suitcase" className="icon-md text-primary" />
             </div>
-            <h3 className="education-degree">Master of Sciences, BioTechnology</h3>
+            <h3 className="education-degree">Master of Science <br></br>Biotechnology</h3>
             <img src="/au_logo.png" alt="IIT Kharagpur Logo" className="education-logo" />
             <div className="education-institution">Andhra University, Vishakaptnam</div>
             <div className="education-year">2000 - 2002</div>
@@ -90,7 +102,7 @@ const EducationSection = () => {
             <div className="icon-container mx-auto">
               <img src="/biotech.png" alt="Suitcase" className="icon-md text-primary" />
             </div>
-            <h3 className="education-degree">Bachelor of Sciences, BioTechnology, Chemistry</h3>
+            <h3 className="education-degree">Bachelor of Science <br></br>Biotechnology, Chemistry</h3>
             <img src="/au_logo.png" alt="IIT Kharagpur Logo" className="education-logo" />
             <div className="education-institution">Andhra University, Vishakaptnam</div>
             <div className="education-year">1997 - 2000</div>

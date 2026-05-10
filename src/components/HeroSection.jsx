@@ -91,7 +91,13 @@ const HeroSection = () => {
             </div>
             
             <p className="hero-description">
-              I'm an entrepreneur and scientist with a proven record of creating transformative life sciences ventures. As the sole inventor of 100+ novel drug molecules across major therapeutic areas, I've advanced innovations from discovery to clinical trials. With multiple patents and global pharma collaborations, I bring expertise in IP, strategy, and team leadership to drive bold ideas into real-world therapies
+              A scientist, inventor, and lawyer operating at the forefront of life sciences innovation, with a demonstrated ability to convert visionary scientific concepts into high-value therapeutic assets and ventures. Sole inventor of over 100 novel drug molecules across diverse therapeutic areas, reflecting both deep scientific creativity and sustained execution at scale.
+            </p>
+            <p className="hero-description">
+              Brings a rare combination of drug discovery expertise, medicinal chemistry insight, and intellectual property mastery to build and protect differentiated innovation pipelines. Recognized for shaping early-stage science into strategic, defensible portfolios and for driving cross-disciplinary alignment that accelerates translation from concept to clinic. 
+            </p>
+            <p className="hero-description">
+              Known for decisive leadership in complex, high-stakes environments where scientific rigor, legal strategy, and commercial vision must converge to create meaningful therapeutic impact.
             </p>
             <a href="#contact" className="hero-cta" aria-label="Click to Contact me">
               <Mail className="icon-sm" aria-hidden="true" />
